@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8% 81% 6% ;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "main main main"
+    "footer footer footer";
+}
+header {
+    background-color: rgb(0, 0, 0);
+    position: sticky;
+    top: 0;
+    grid-area: header;
+}
+#logo {
+    font-size: 1rem;
+    display: grid;
+    justify-content: center;
+    width: 8%;
+    position: relative;
+    left: 45%;
+}
+nav {
+    font-size: 1rem;
+    height: 100%;
+}
+header nav {
+    width: 100%;
+}
+.botonesNavegacion {
+    display: grid;
+    grid-template-columns: 80px 100px 100px;
+    list-style-type: none;
+    width: 13%;
+    position: relative;
+    left: 31%;
+    bottom: 40%;
+}
+.botonesNavegacion2 {
+    display: grid;
+    grid-template-columns: 80px 100px 100px;
+    list-style-type: none;
+    width: 13%;
+    position: relative;
+    left: 54%;
+    bottom: 63%;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+main {
+    font-size: 1rem;
+    grid-area: main;
+}
+#imagenInicio{
+    font-size: 1rem;
+    background-image: url("../assets/images/Agustina\ XV\ \(270\).jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.bannerOpacity{
+    background: rgb(170,170,170);
+    background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
+    height: 21.5%;
+}
+#imagenNosotros {
+    font-size: 1rem;
+    background-image: url("../assets/images/IMG_20221215_233005970.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.nosotrosOpacity {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
+    width: 30%;
+    height: 100%; 
+}
+.logoNosotros {
+    font-size: 1rem;
+    display: grid;
+    height: 55%;
+    justify-items: center;
+    align-items: end;
+}
+.logoEmpresaNosotros {
+    font-size: 1rem;
+    width: 45%;
+}
+.botonesRedes {
+    display: flex;  
+}
+.whatsapp { 
+    width: 13%;
+    margin-top: 2%;
+    margin-left: 85%;
+}
+.whats1 {
+    width: 62%;
+}
+.instagram {
+    width: 13%;
+    margin-top: 2%;
+    margin-left: 3%;  
+}
+.insta1{
+    width: 62%;
+}
+.textoNosotros {
+
+}
+#imagenContacto {
+    font-size: 1rem;
+    background-image: url("../assets/images/contacto.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#servicio {
+    font-size: 1rem;
+    background-image: url("../assets/images/Agustina\ XV\ \(283\).jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#fotos {
+    font-size: 1rem;
+    background-image: url("../assets/images/Agustina\ XV\ \(4\).jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#eventos {
+    font-size: 1rem;
+    background-image: url("../assets/images/IMG_20221223_214927242.jpg");
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+main div {
+    color: white;
+    font-size: larger;
+}
+.textoBanner{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 20px 0px 0px 320px;
+}
+.pedirPresupuesto{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1rem;
+    padding: 30px 0px 0px 320px;
+}
+main ul li a {
+    display: inline-block;
+    list-style-type: none;
+    text-decoration: none;
+    background-color: #fc9b00;
+    color: white;
+    padding: 8px 70px 8px 70px;
+    border-radius: 5px;
+}
+.contacto{
+    display: inline-block;
+    width: 20%;
+    padding-left: 700px;
+    margin-top: 2%;
+    text-align: left;
+}
+.contactoTitulo {
+    display: inline-block;
+    color: white;
+    padding: 10px 0px 0px 140px;
+    font-size: 28px;
+}
+.formulario {
+    display: inline-block;
+    padding: 200px 0px 0px 100px;
+    font-size: 1rem;
+}
+main section div input {
+    display: inline-block;
+    padding: 8px 50px 8px 50px;
+    border-radius: 5px;
+}
+#email {
+    display: inline-block;
+    width: 300px;
+    height: 65px;
+}
+#name {
+    display: inline-block;
+    width: 90%;
+    height: 12%;
+}
+#telefono{
+    display: inline-block;
+    width: 90%;
+    height: 12%;
+}
+.mensaje{
+    display: inline-block;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+.enviar {
+    display: inline-block;
+    padding-left: 68px;
+    padding-top: 10px;
+}
+#datos{
+    display: inline-block;
+    padding-left: 1100px ;
+    position: relative;
+    bottom: 395px;
+}
+footer {
+    background-color: rgb(0, 0, 0);
+    grid-area: footer;
+}
+.copy{
+    display: inline-block;
+    color: white;
+    padding-left: 43.2%;
+    text-align: center;
+}
+.redes{
+    display: inline-block;
+    padding-top: 15px;
+    font-size: 25px;
+}
