@@ -95,7 +95,7 @@ main ul li a {
     display: grid;
     grid-template-columns:30% 70%;
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
     height: 100%; 
 }
@@ -221,7 +221,7 @@ div textarea{
 }
 .datosOpacity{
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
     height: 100%;
     position: relative;
@@ -242,6 +242,157 @@ div textarea{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+.servicioOpacity {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:10% 40% 20% 30%;
+    grid-template-areas:
+    "titulo"
+    "texto"
+    "iconos"
+    "fotos";
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
+    width: 100%;
+    height: 100%; 
+}
+.tituloServicio{
+    grid-area: titulo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+
+}
+.divServicio {
+    grid-area: texto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.textoServicio{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.iconos{
+    /* background-color: beige; */
+    grid-area: iconos;
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 42% 6% 6% 42%;
+    grid-template-areas: 
+    "sonido iluminacion estructuras energia";
+}
+.divSonido{
+    grid-area: sonido;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-start;
+    width: 100%;
+}
+.sonido{
+    background-color: white;
+    border: 5px solid #363636;
+    border-radius: 5px;
+    position: relative;
+    width: 12%;
+    display: flex;
+}
+.tituloSonido{
+    grid-area: sonido;
+    display: flex;
+    position: relative;
+    bottom: 70px;
+    left: 735px;
+    font-size: 1rem;
+}
+.divEnergia{
+    grid-area: energia;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: flex-start;
+    width: 100%;
+}
+.energia{
+    background-color: white;
+    border: 5px solid #363636;
+    border-radius: 5px;
+    position: relative;
+    width: 12%;
+    display: flex;
+}
+.tituloEnergia{
+    grid-area: energia;
+    display: flex;
+    position: relative;
+    top: 95px;
+    left: 20px;
+    font-size: 1rem;
+
+
+}
+.divEstructuras{
+    grid-area: estructuras;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.estructuras{
+    border: 5px solid #363636;
+    border-radius: 5px;
+    position: relative;
+    width: 76%;
+    display: flex;
+}
+.tituloEstructuras{
+    grid-area: estructuras;
+    display: flex;
+    position: relative;
+    top: 95px;
+    left: 16px;
+    font-size: 1rem;
+
+}
+.divIluminacion{
+    grid-area: iluminacion;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+.iluminacion{
+    background-color: white;
+    border: 5px solid #363636;
+    border-radius: 5px;
+    position: relative;
+    width: 85%;
+    display: flex;
+}
+.tituloIluminacion{
+    grid-area: iluminacion;
+    display: flex;
+    position: relative;
+    top: 95px;
+    left: 17px;
+    font-size: 1rem;
+
 }
 #fotos {
     font-size: 1rem;
