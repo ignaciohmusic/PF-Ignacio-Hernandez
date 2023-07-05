@@ -257,7 +257,38 @@ div textarea{
     width: 100%;
     height: 80px;
 }
+.tituloFotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1rem;
+}
+#boton1 {
+    width: 21%;
+    position: relative;
+    left: 220px;
+    top: 70px;  
+}
+#boton2 {
+    width: 21%;
+    position: relative;
+    right: 220px;
+    top: 70px; 
 
+}
+#modalCentrar{
+    position: relative;
+    top: 200px;
+
+}
+.eventos{
+    width: 100%;
+    height: 100%;
+    padding: auto;
+    border-radius: 30px;
+}
 #eventos {
     font-size: 1rem;
     background-image: url("../assets/images/IMG_20221223_214927242.jpg");
