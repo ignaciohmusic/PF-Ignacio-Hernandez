@@ -266,7 +266,6 @@ div textarea{
     height: 100%;
     width: 100%;
     font-size: 1rem;
-
 }
 .divServicio {
     grid-area: texto;
@@ -285,7 +284,6 @@ div textarea{
     font-size: 1.1rem;
 }
 .iconos{
-    /* background-color: beige; */
     grid-area: iconos;
     display: grid;
     grid-template-rows: 100%;
@@ -342,8 +340,6 @@ div textarea{
     top: 95px;
     left: 20px;
     font-size: 1rem;
-
-
 }
 .divEstructuras{
     grid-area: estructuras;
@@ -392,7 +388,6 @@ div textarea{
     top: 95px;
     left: 17px;
     font-size: 1rem;
-
 }
 #fotos {
     font-size: 1rem;
@@ -432,7 +427,6 @@ div textarea{
 #modalCentrar{
     position: relative;
     top: 200px;
-
 }
 .eventos{
     width: 100%;
@@ -447,6 +441,50 @@ div textarea{
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
+}
+.eventosOpacity {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:10% 40% 50%;
+    grid-template-areas:
+    "titulo"
+    "texto"
+    "fotos";
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
+    width: 100%;
+    height: 100%; 
+}
+.tituloEventos {
+    grid-area: titulo;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+}
+.divTextEventos{
+    grid-area: texto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+.textoEventos{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+.videoEventos{
+    grid-area: fotos;
+    display: flex;
+    justify-content: center;
 }
 footer {
     background-color: rgb(0, 0, 0);
