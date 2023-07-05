@@ -92,24 +92,39 @@ main ul li a {
     background-attachment: fixed;
 }
 .nosotrosOpacity {
+    display: grid;
+    grid-template-columns:30% 70%;
     background: rgb(0,0,0);
     background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
-    width: 30%;
+    width: 100%;
     height: 100%; 
+}
+.nosotros{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
 }
 .logoNosotros {
     font-size: 1rem;
-    display: grid;
-    height: 55%;
-    justify-items: center;
-    align-items: end;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-wrap: nowrap;
+    align-items: flex-end;
 }
 .logoEmpresaNosotros {
     font-size: 1rem;
-    width: 45%;
+    width: 100%;
 }
 .botonesRedes {
-    display: flex;  
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
 }
 .whatsapp { 
     width: 13%;
@@ -128,7 +143,13 @@ main ul li a {
     width: 62%;
 }
 .textoNosotros {
-
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 92%;
 }
 #imagenContacto {
     font-size: 1rem;
@@ -230,6 +251,13 @@ div textarea{
     background-size: cover;
     background-attachment: fixed;
 }
+.galeriaOpacity{
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
+    width: 100%;
+    height: 80px;
+}
+
 #eventos {
     font-size: 1rem;
     background-image: url("../assets/images/IMG_20221223_214927242.jpg");
