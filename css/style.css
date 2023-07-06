@@ -7,7 +7,7 @@
 body {
     height: 100vh;
     display: grid;
-    grid-template-rows: 8% 79% 6% ;
+    grid-template-rows: 8% 79% 5% ;
     grid-template-columns: repeat(3, 1fr) ;
     grid-template-areas:
     "header header header"
@@ -48,6 +48,12 @@ main {
     background-attachment: fixed;
 }
 .bannerOpacity{
+    display: grid;
+    grid-template-columns:repeat(2, 1fr) ;
+    grid-template-rows:70% 30% ;
+    grid-template-areas: 
+    "texto texto"
+    "boton boton";
     background: rgb(170,170,170);
     background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
     height: 21.5%;
@@ -59,28 +65,27 @@ main div {
     font-size: 2rem;
 }
 .textoBanner{
-    display: grid;
-    position: relative;
-    bottom: 5%;
+    display: flex;
+    grid-area: texto;
+    flex-direction: column;
     font-size: 1rem;
-    padding: 20px 0px 0px 320px;
+    margin-left: 320px;
 }
 .pedirPresupuesto{
-    display: grid;
+    display: flex;
+    grid-area: boton;
     list-style-type: none;
-    width: 32%;
+    width: 100%;
     font-size: 1rem;
-    padding: 30px 0px 0px 320px;
+    margin-left: 289px;
 }
 main ul li a {
-    display: grid;
+    display: flex;
     list-style-type: none;
     text-decoration: none;
     background-color: #fc9b00;
     color: white;
-    position: relative;
-    bottom: 115%;
-    padding: 8px 70px 8px 70px;
+    padding: 6px 70px 6px 70px;
     border-radius: 5px;
 }
 #imagenNosotros {
@@ -159,22 +164,32 @@ main ul li a {
     background-size: cover;
     background-attachment: fixed;
 }
+.datosOpacity{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-row: 10% 90% ;
+    grid-template-areas:
+    "contacto contacto contacto"
+    "none formulario datos" ;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
+    width: 100%;
+    height: 100%;
+}
 .contactoTitulo {
     display: grid;
+    grid-area: contacto;
     justify-content: center;
     color: white;
     margin-top: 40px ;
 }
 .formulario {
     display: grid;
+    grid-area: formulario;
     justify-content: center;
     align-content: start;
     font-size: 1rem; 
     margin-top: 100px;
-    position: relative;
-    left: 380px;
-    height: 80%;
-    width: 60%;
 }
 main input {
     display: grid;
@@ -219,21 +234,12 @@ div textarea{
 .wEnviar{
     width: 200px;
 }
-.datosOpacity{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
-    width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: 40px;
-
-}
 .datos{
-    display: grid;
-    align-content: center;
-    position: relative;
-    bottom: 530px;
-    left: 360px;
+    display: flex;
+    grid-area: datos;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 190px;
 }
 #servicio {
     font-size: 1rem;
@@ -390,6 +396,8 @@ div textarea{
     font-size: 1rem;
 }
 #fotos {
+    width: 100%;
+    height: auto;
     font-size: 1rem;
     background-image: url("../assets/images/Agustina\ XV\ \(4\).jpg");
     background-repeat:no-repeat;
@@ -490,14 +498,204 @@ footer {
     background-color: rgb(0, 0, 0);
     grid-area: footer;
 }
+.footer{
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: 1fr;
+}
 .copy{
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding-left: 43.2%;
-    text-align: center;
 }
 .redes{
-    display: inline-block;
-    padding-top: 15px;
+    display: flex;
+    align-items: center;
     font-size: 25px;
+    flex-direction: row;
+    justify-content: center;
+}
+@media screen and (max-width:1200px) {
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 8% 79% 4% ;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    }
+    header {
+        font-size: 0.9rem;
+    }
+    .tituloBanner {
+        font-size: 1.7rem;
+        margin-top: 14px;
+    }
+    .textoBanner{
+        display: flex;
+        grid-area: texto;
+        flex-direction: column;
+        font-size: 0.9rem;
+        margin-left: 4%;
+    }
+    .pedirPresupuesto{
+        display: flex;
+        width: 100%;
+        font-size: 0.7rem;
+        margin-left: 9px;
+        margin-top: 7px;
+    }
+    .textoEventos {
+        font-size: 0.9rem;
+    }
+    .videoEventos {
+        grid-area: fotos;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .copy{
+        display: flex;
+        color: white;
+        margin-right: 0px;
+        font-size: 1rem;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+   
+}
+/* @media screen and (max-width:1024px) {
+    body {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 8% 79% 4% ;
+        grid-template-columns: repeat(3, 1fr) ;
+        grid-template-areas:
+        "header header header"
+        "main main main"
+        "main main main"
+        "footer footer footer";
+    }
+    header {
+        font-size: 0.9rem;
+    }
+    .tituloBanner {
+        font-size: 1.7rem;
+        margin-top: 14px;
+    }
+    .textoBanner{
+        display: flex;
+        grid-area: texto;
+        flex-direction: column;
+        font-size: 0.9rem;
+        margin-left: 4%;
+    }
+    .pedirPresupuesto{
+        display: flex;
+        width: 100%;
+        font-size: 0.7rem;
+        margin-left: 9px;
+        margin-top: 7px;
+    }
+    .textoEventos {
+        font-size: 0.9rem;
+    }
+    .videoEventos {
+        grid-area: fotos;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .copy{
+        display: flex;
+        color: white;
+        margin-right: 0px;
+        font-size: 1rem;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+} */
+@media screen and (max-width:425px)  {
+    body {
+        height: 269vh;
+        display: grid;
+        grid-template-rows: 3% 90% 7%;
+        grid-template-columns: 200.4%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+    header {
+        font-size: 1.5rem;
+    }
+    .bannerOpacity{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 65% 35%;
+        grid-template-areas:
+            "texto"
+            "boton";
+        background: rgb(170,170,170);
+        background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
+        height: 18%;
+    }
+    .tituloBanner {
+        font-size: 3rem;
+    }
+    .textoBanner{
+        display: flex;
+        grid-area: texto;
+        flex-direction: column;
+        font-size: 2rem;
+        margin-left: 4%;
+        margin-top: 5%;
+    }
+    .pedirPresupuesto{
+        display: flex;
+        width: 100%;
+        font-size: 1.7rem;
+        margin-left: 0px;
+    }
+    .eventosOpacity {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows:10% 45% 45%;
+    } 
+    .eventosTitulo{
+        font-size: 3rem;
+
+    }
+    .textoEventos{
+        font-size: 1.5rem;
+    }
+    .copy{
+        margin-right: 0px;
+        font-size: 1.5rem;
+    }
+
 }
