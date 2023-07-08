@@ -45,9 +45,10 @@
     </header>
     <main id="imagenContacto">
         <section class="datosOpacity">
-                <div class="contactoTitulo">
-                    <h1>CONTACTO</h1>
-                </div>
+            <div class="contactoTitulo">
+                <h1>CONTACTO</h1>
+            </div>
+            <div class="divFormDatos">
                 <div class="datos">
                     <div>
                         <h3>Telefono</h3>
@@ -61,36 +62,38 @@
                     </div>
                     <div>
                         <p>conceptofiesta.rosario@gmail.com</p>
-                        </div>
+                    </div>
                     <br>
                     <div>
                         <p>Rosario - Santa Fe</p>
                     </div> 
-                </div>                 
-                <div class="formulario">
-                    <form action="" method="post" enctype="multipart/form-data"></form>
-                    <div id="name">
-                         <label for="NAME" class="titulosFormulario">Nombre y Apellido</label>
-                         <input type="name" name="name" placeholder="Nombre y Apellido" id="NAME" required>
+                </div>     
+                <div>
+                    <div class="formulario">
+                        <form action="" method="post" enctype="multipart/form-data"></form>
+                        <div id="name">
+                                 <label for="NAME" class="titulosFormulario">Nombre y Apellido</label>
+                                 <input type="name" name="name" placeholder="Nombre y Apellido" id="NAME" required>
+                        </div>
+                        <div id="email">
+                                 <label for="EMAIL" class="titulosFormulario">Correo Electronico</label>
+                                 <input type="email" name="email" placeholder="Correo Electronico" id="EMAIL" required>
+                        </div>
+                        <div id="telefono" >
+                                 <label for="TELEFONO" class="titulosFormulario">Telefono de Contacto</label>
+                                 <input type="telefono" name="telefono" placeholder="Telefono de Contacto" id="Telefono" required>                       
+                        </div> 
+                        <br>
+                        <div>
+                                 <label for="MENSAJE" class="titulosFormulario">Mensaje</label>
+                            <div class="mensaje">
+                                 <textarea name="Mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu Consulta"></textarea>
+                            </div>
+                            <div class="enviar">
+                                 <input class="wEnviar" type="submit" name="Enviar MENSAJE">
+                            </div> 
                     </div>
-                    <div id="email">
-                         <label for="EMAIL" class="titulosFormulario">Correo Electronico</label>
-                         <input type="email" name="email" placeholder="Correo Electronico" id="EMAIL" required>
-                    </div>
-                    <div id="telefono" >
-                         <label for="TELEFONO" class="titulosFormulario">Telefono de Contacto</label>
-                         <input type="telefono" name="telefono" placeholder="Telefono de Contacto" id="Telefono" required>                       
-                    </div> 
-                    <br>
-                    <div>
-                         <label for="MENSAJE" class="titulosFormulario">Mensaje</label>
-                    <div class="mensaje">
-                         <textarea name="Mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu Consulta"></textarea>
-                    </div>
-                    <div class="enviar">
-                         <input class="wEnviar" type="submit" name="Enviar MENSAJE">
-                    </div> 
-                </div>          
+                </div>       
         </section>>
     </main>
 <footer>

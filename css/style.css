@@ -48,15 +48,11 @@ main {
     background-attachment: fixed;
 }
 .bannerOpacity{
-    display: grid;
-    grid-template-columns:repeat(2, 1fr) ;
-    grid-template-rows:70% 30% ;
-    grid-template-areas: 
-    "texto texto"
-    "boton boton";
+    display: flex;
+    flex-direction: column;
     background: rgb(170,170,170);
     background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
-    height: 21.5%;
+    height: 22%;
 }
 main div {
     color: white;
@@ -69,7 +65,10 @@ main div {
     grid-area: texto;
     flex-direction: column;
     font-size: 1rem;
-    margin-left: 320px;
+    margin-left: 10%;
+}
+.divPresupuesto{
+    margin-left: 8%;
 }
 .pedirPresupuesto{
     display: flex;
@@ -77,7 +76,6 @@ main div {
     list-style-type: none;
     width: 100%;
     font-size: 1rem;
-    margin-left: 289px;
 }
 main ul li a {
     display: flex;
@@ -97,8 +95,8 @@ main ul li a {
     background-attachment: fixed;
 }
 .nosotrosOpacity {
-    display: grid;
-    grid-template-columns:30% 70%;
+    display: flex;
+    flex-direction: row;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
@@ -109,7 +107,7 @@ main ul li a {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 50%;
     height: 100%;
 
 }
@@ -165,31 +163,32 @@ main ul li a {
     background-attachment: fixed;
 }
 .datosOpacity{
-    display: grid;
-    grid-template-columns:repeat(3, 1fr) ;
-    grid-row: 10% 90% ;
-    grid-template-areas:
-    "contacto contacto contacto"
-    "none formulario datos" ;
+    display: flex;
+    flex-direction: column;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
     height: 100%;
 }
 .contactoTitulo {
-    display: grid;
-    grid-area: contacto;
+    display: flex;
     justify-content: center;
     color: white;
-    margin-top: 40px ;
+}
+.divFormDatos{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-left: 32.5%;
+    width: 49%;
+    margin-top: 7%;
 }
 .formulario {
-    display: grid;
-    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: start;
-    font-size: 1rem; 
-    margin-top: 100px;
+    font-size: 1rem;
+    align-items: center;
 }
 main input {
     display: grid;
@@ -198,19 +197,25 @@ main input {
     width: 300px;
 }
 #email {
-    display: grid;
+    display: flex;
     width: 90%;
     height: 12%;
+    flex-direction: column;
+    align-items: center;
 }
 #name {
-    display: grid;
+    display: flex;
     width: 90%;
     height: 12%;
+    flex-direction: column;
+    align-items: center;
 }
 #telefono{
-    display: grid;
+    display: flex;
     width: 90%;
     height: 12%;
+    align-items: center;
+    flex-direction: column;
 }
 .mensaje{
     display: grid;
@@ -222,24 +227,27 @@ div textarea{
     width: 300px;
 }
 .titulosFormulario{
-    display: grid;
-    justify-content: center;
+    display: flex;
     font-size: 1rem;
+    flex-direction: column;
+    align-items: center;
 }
 .enviar {
-    display: grid;
+    display: flex;
     justify-items: center;
     padding: 10px 10px 10px 10px;
+    flex-direction: column;
+    align-items: center;
 }
 .wEnviar{
     width: 200px;
 }
 .datos{
     display: flex;
-    grid-area: datos;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 190px;
+    margin-bottom: 26.5%;
+    margin-left: 3%;
 }
 #servicio {
     font-size: 1rem;
@@ -250,14 +258,8 @@ div textarea{
     background-attachment: fixed;
 }
 .servicioOpacity {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows:10% 40% 20% 30%;
-    grid-template-areas:
-    "titulo"
-    "texto"
-    "iconos"
-    "fotos";
+    display: flex;
+    flex-direction: column;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
@@ -269,13 +271,13 @@ div textarea{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 12%;
     width: 100%;
     font-size: 1rem;
 }
 .divServicio {
     grid-area: texto;
-    height: 100%;
+    height: 50%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -292,10 +294,11 @@ div textarea{
 .iconos{
     grid-area: iconos;
     display: grid;
-    grid-template-rows: 100%;
+    grid-template-rows: 76% 50%;
     grid-template-columns: 42% 6% 6% 42%;
     grid-template-areas: 
-    "sonido iluminacion estructuras energia";
+    "sonido iluminacion estructuras energia"
+    "titulo1 titulo2 titulo3 titulo4";
 }
 .divSonido{
     grid-area: sonido;
@@ -315,12 +318,12 @@ div textarea{
     display: flex;
 }
 .tituloSonido{
-    grid-area: sonido;
+    grid-area: titulo1;
     display: flex;
-    position: relative;
-    bottom: 70px;
-    left: 735px;
+    width: 100%;
     font-size: 1rem;
+    flex-direction: row;
+    justify-content: end;
 }
 .divEnergia{
     grid-area: energia;
@@ -335,16 +338,12 @@ div textarea{
     background-color: white;
     border: 5px solid #363636;
     border-radius: 5px;
-    position: relative;
     width: 12%;
     display: flex;
 }
 .tituloEnergia{
-    grid-area: energia;
+    grid-area: titulo4;
     display: flex;
-    position: relative;
-    top: 95px;
-    left: 20px;
     font-size: 1rem;
 }
 .divEstructuras{
@@ -358,18 +357,14 @@ div textarea{
 .estructuras{
     border: 5px solid #363636;
     border-radius: 5px;
-    position: relative;
     width: 76%;
     display: flex;
 }
 .tituloEstructuras{
-    grid-area: estructuras;
+    grid-area: titulo3;
     display: flex;
-    position: relative;
-    top: 95px;
-    left: 16px;
     font-size: 1rem;
-
+    justify-content: center;
 }
 .divIluminacion{
     grid-area: iluminacion;
@@ -383,17 +378,14 @@ div textarea{
     background-color: white;
     border: 5px solid #363636;
     border-radius: 5px;
-    position: relative;
     width: 85%;
     display: flex;
 }
 .tituloIluminacion{
-    grid-area: iluminacion;
+    grid-area: titulo2;
     display: flex;
-    position: relative;
-    top: 95px;
-    left: 17px;
     font-size: 1rem;
+    justify-content: center;
 }
 #fotos {
     width: 100%;
@@ -420,17 +412,10 @@ div textarea{
     font-size: 1rem;
 }
 #boton1 {
-    width: 21%;
-    position: relative;
-    left: 220px;
-    top: 70px;  
+    /* width: 21%; */
 }
 #boton2 {
-    width: 21%;
-    position: relative;
-    right: 220px;
-    top: 70px; 
-
+    /* width: 21%; */
 }
 #modalCentrar{
     position: relative;
@@ -451,31 +436,25 @@ div textarea{
     background-attachment: fixed;
 }
 .eventosOpacity {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows:10% 40% 50%;
-    grid-template-areas:
-    "titulo"
-    "texto"
-    "fotos";
+    display: flex;
+    flex-direction: column;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
     width: 100%;
     height: 100%; 
 }
 .tituloEventos {
-    grid-area: titulo;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 12%;
     width: 100%;
     font-size: 1rem;
+    
 }
 .divTextEventos{
-    grid-area: texto;
-    height: 100%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;   
@@ -490,18 +469,18 @@ div textarea{
     font-size: 1.1rem;
 }
 .videoEventos{
-    grid-area: fotos;
+    height: 62%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 footer {
     background-color: rgb(0, 0, 0);
     grid-area: footer;
 }
 .footer{
-    display: grid;
-    grid-template-columns:1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
 }
 .copy{
     display: flex;
@@ -522,7 +501,7 @@ footer {
     body {
         height: 100vh;
         display: grid;
-        grid-template-rows: 8% 79% 4% ;
+        grid-template-rows: 14% 128% 4%;
         grid-template-columns: repeat(3, 1fr) ;
         grid-template-areas:
         "header header header"
@@ -530,40 +509,68 @@ footer {
         "main main main"
         "footer footer footer";
     }
+    .bannerOpacity{
+        display: flex;
+        background: rgb(170,170,170);
+        background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
+        height: 18%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
     header {
         font-size: 0.9rem;
     }
     .tituloBanner {
-        font-size: 1.7rem;
-        margin-top: 14px;
+        font-size: 1.3rem;
     }
     .textoBanner{
         display: flex;
         grid-area: texto;
         flex-direction: column;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin-left: 4%;
+        margin-top: 0.2%;
+        height: 68%;
+    }
+    .divPresupuesto {
+        margin-left: 0%;
     }
     .pedirPresupuesto{
         display: flex;
         width: 100%;
         font-size: 0.7rem;
-        margin-left: 9px;
-        margin-top: 7px;
+        margin-left: 1%;
     }
-    .textoEventos {
-        font-size: 0.9rem;
-    }
-    .videoEventos {
-        grid-area: fotos;
+    .eventosOpacity {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+    }
+    .tituloEventos {
+        display: flex;
+        height: 8%;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .eventosTitulo{
+        font-size: 3rem;
+    }
+    .divTextEventos {
+        height: 65%;
+    }
+    .videoEventos{
+        display: flex;
+        height: 45%;
+        flex-direction: row;
         align-items: center;
     }
-    .footer{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+    .textoEventos{
+        font-size: 1rem;
+    }
+    .divFormDatos{
+        margin-left: 36.5%;
+    }
+    .datos{
+        margin-bottom: 42%;
     }
     .copy{
         display: flex;
@@ -643,7 +650,7 @@ footer {
     body {
         height: 269vh;
         display: grid;
-        grid-template-rows: 3% 90% 7%;
+        grid-template-rows: 7% 98% 7%;
         grid-template-columns: 200.4%;
         grid-template-areas:
             "header"
@@ -654,41 +661,85 @@ footer {
         font-size: 1.5rem;
     }
     .bannerOpacity{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 65% 35%;
-        grid-template-areas:
-            "texto"
-            "boton";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         background: rgb(170,170,170);
         background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
-        height: 18%;
+        height: 22%;
     }
     .tituloBanner {
         font-size: 3rem;
     }
     .textoBanner{
         display: flex;
+        height: 100%;
         grid-area: texto;
         flex-direction: column;
+        justify-content: center;
         font-size: 2rem;
         margin-left: 4%;
-        margin-top: 5%;
     }
     .pedirPresupuesto{
         display: flex;
+        flex-direction: row;
         width: 100%;
         font-size: 1.7rem;
         margin-left: 0px;
     }
+    .nosotrosOpacity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .textoNosotros {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 1.8rem;
+        height: 89%;
+        width: 85%;
+    }
+    .nosotros {
+        width: 50%;
+        height: 40%;
+    }
+    
+    .divFormDatos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 24%;
+        width: 49%;
+        margin-top: 7%;
+        align-items: center;
+    }
+    .datos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0%;
+    }
     .eventosOpacity {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows:10% 45% 45%;
-    } 
+        display: flex;
+        flex-direction: column;
+    }
+    .tituloEventos {
+        height: 8%;
+    }
     .eventosTitulo{
         font-size: 3rem;
-
+    }
+    .divTextEventos {
+        height: 65%;
+    }
+    .videoEventos{
+        display: flex;
+        height: 27%;
+        flex-direction: column;
+        align-items: center;
     }
     .textoEventos{
         font-size: 1.5rem;
@@ -696,6 +747,12 @@ footer {
     .copy{
         margin-right: 0px;
         font-size: 1.5rem;
+    }
+    .redes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
     }
 
 }
