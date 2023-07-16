@@ -1,5 +1,5 @@
 #imagenNosotros {
-    background-image: url("../assets/images/IMG_20221215_233005970.jpg");
+    background-image: url("../assets/images/nosotros.webp");
     @include caracteristicas-background-image; 
 
     .nosotrosOpacity {
@@ -64,7 +64,7 @@
                 font-size: 1.4rem;
             }
             @include mobile {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
     }

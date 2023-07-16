@@ -1,5 +1,5 @@
 #imagenContacto {
-    background-image: url("../assets/images/contacto.jpg");
+    background-image: url("../assets/images/contacto.webp");
     @include caracteristicas-background-image; 
 
     .datosOpacity{
@@ -47,7 +47,7 @@
                 @include mobile {
                     align-items: center;
                     margin-bottom: 0%;
-                    font-size: 1.5rem;
+                    font-size: 0.8rem;
                 }
             }
             .formulario {
@@ -58,7 +58,7 @@
                     font-size: 0.5rem;
                 }
                 @include mobile {
-                    font-size: 1.2rem;
+                    font-size: 0rem;
                     align-items: center;
                 }
                 .divFormulario {
@@ -87,7 +87,7 @@
                             justify-content: center;
                             width: 300px;
                             @include desktop {
-                                height: 135px;
+                                height: 77px;
                             }
 
                         }

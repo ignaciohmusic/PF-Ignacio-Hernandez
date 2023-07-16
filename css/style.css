@@ -18,7 +18,7 @@ body {
   @media screen and (max-width: 425px) {
     body {
       height: 100vh;
-      grid-template-rows: 8% 84% 8%;
+      grid-template-rows: 10% 82% 8%;
       grid-template-columns: 100%;
       grid-template-areas: "header" "main" "footer"; } }
 
@@ -52,7 +52,7 @@ main {
   color: #ffffff; }
 
 #imagenInicio {
-  background-image: url("../assets/images/Agustina XV (270).jpg");
+  background-image: url("../assets/images/inicio.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -87,18 +87,18 @@ main {
           height: 68%; } }
       @media screen and (max-width: 425px) {
         #imagenInicio .bannerOpacity .textoBanner {
-          font-size: 1.3rem;
+          font-size: 1rem;
           flex-direction: column;
           justify-content: center;
           height: 100%; } }
       #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
-        font-size: 2rem; }
+        font-size: 2.1rem; }
         @media screen and (max-width: 1440px) {
           #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
             font-size: 1.3rem; } }
         @media screen and (max-width: 425px) {
           #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
-            font-size: 2.3rem; } }
+            font-size: 2rem; } }
     #imagenInicio .bannerOpacity .divPresupuesto {
       margin-left: 8%; }
       @media screen and (max-width: 1440px) {
@@ -119,7 +119,7 @@ main {
             margin-left: 1%; } }
         @media screen and (max-width: 425px) {
           #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
-            font-size: 1.3rem;
+            font-size: 1rem;
             margin-left: 0px; } }
         #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto li a {
           display: flex;
@@ -152,7 +152,7 @@ footer {
 
 /*componentes*/
 #imagenNosotros {
-  background-image: url("../assets/images/IMG_20221215_233005970.jpg");
+  background-image: url("../assets/images/nosotros.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -215,10 +215,10 @@ footer {
           font-size: 1.4rem; } }
       @media screen and (max-width: 425px) {
         #imagenNosotros .nosotrosOpacity .textoNosotros {
-          font-size: 1.2rem; } }
+          font-size: 1rem; } }
 
 #servicio {
-  background-image: url("../assets/images/Agustina XV (283).jpg");
+  background-image: url("../assets/images/servicio.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -264,7 +264,7 @@ footer {
         font-size: 1.1rem; }
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .divServicio .textoServicio {
-            font-size: 0.9rem; } }
+            font-size: 0.7rem; } }
     #servicio .servicioOpacity .iconos {
       grid-area: iconos;
       display: grid;
@@ -376,7 +376,7 @@ footer {
             margin-left: 6.5%; } }
 
 #fotos {
-  background-image: url("../assets/images/Agustina XV (4).jpg");
+  background-image: url("../assets/images/fotos.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -409,14 +409,14 @@ footer {
     left: -15%; }
     @media screen and (max-width: 425px) {
       #fotos #boton1 {
-        margin-top: 20%;
+        margin-top: 5%;
         left: 0%; } }
   #fotos #modalCentrar {
     position: relative;
     top: 200px; }
   @media screen and (max-width: 425px) {
     #fotos .col-3 {
-      width: 70%; } }
+      width: 56%; } }
   #fotos #boton2 {
     height: 100%;
     margin-top: -26.8%;
@@ -466,7 +466,7 @@ footer {
           font-size: 0.9rem; } }
       @media screen and (max-width: 425px) {
         #eventos .divTextEventos .textoEventos {
-          font-size: 0.65rem; } }
+          font-size: 0.6rem; } }
   #eventos .videoEventos {
     height: 62%;
     display: flex;
@@ -482,7 +482,7 @@ footer {
           width: 400px; } }
 
 #imagenContacto {
-  background-image: url("../assets/images/contacto.jpg");
+  background-image: url("../assets/images/contacto.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -536,7 +536,7 @@ footer {
           #imagenContacto .datosOpacity .divFormDatos .datos {
             align-items: center;
             margin-bottom: 0%;
-            font-size: 1.5rem; } }
+            font-size: 0.8rem; } }
       #imagenContacto .datosOpacity .divFormDatos .formulario {
         display: flex;
         flex-direction: column;
@@ -548,7 +548,7 @@ footer {
             font-size: 0.5rem; } }
         @media screen and (max-width: 425px) {
           #imagenContacto .datosOpacity .divFormDatos .formulario {
-            font-size: 1.2rem;
+            font-size: 0rem;
             align-items: center; } }
         #imagenContacto .datosOpacity .divFormDatos .formulario .divFormulario {
           display: flex;
@@ -582,7 +582,7 @@ footer {
               width: 300px; }
               @media screen and (max-width: 1440px) {
                 #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje textarea {
-                  height: 135px; } }
+                  height: 77px; } }
           #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar {
             display: flex;
             justify-items: center;

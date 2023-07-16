@@ -1,5 +1,5 @@
 #servicio {
-    background-image: url("../assets/images/Agustina\ XV\ \(283\).jpg");
+    background-image: url("../assets/images/servicio.webp");
     @include caracteristicas-background-image; 
 
     .servicioOpacity {
@@ -41,7 +41,7 @@
                 @include d-flex-row-all-center;
                 font-size: 1.1rem;
                 @include mobile  {
-                    font-size: 0.9rem;
+                    font-size: 0.7rem;
                 }
             }
         }

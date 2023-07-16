@@ -1,5 +1,5 @@
 #fotos {
-    background-image: url("../assets/images/Agustina\ XV\ \(4\).jpg");
+    background-image: url("../assets/images/fotos.webp");
     @include caracteristicas-background-image; 
 
     .galeriaOpacity{
@@ -27,7 +27,7 @@
         position: relative;
         left: -15%;
         @include mobile {
-            margin-top: 20%;
+            margin-top: 5%;
             left: 0%;
         }
    }
@@ -37,7 +37,7 @@
    }
    @include mobile {
     .col-3 {
-        width: 70%;
+        width: 56%;
        }
    }
 

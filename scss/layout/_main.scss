@@ -4,7 +4,7 @@ main {
     color: $white 
 }
 #imagenInicio{
-    background-image: url("../assets/images/Agustina\ XV\ \(270\).jpg");
+    background-image: url("../assets/images/inicio.webp");
     @include caracteristicas-background-image; 
 
     .bannerOpacity{
@@ -35,18 +35,18 @@ main {
                 height: 68%; 
             }
             @include mobile {
-                font-size: 1.3rem;
+                font-size: 1rem;
                 flex-direction: column;
                 justify-content: center;
                 height: 100%;
             }
             .tituloBanner {
-                font-size: 2rem;
+                font-size: 2.1rem;
                 @include desktop {
                     font-size: 1.3rem;
                 }
                 @include mobile {
-                    font-size: 2.3rem;
+                    font-size: 2rem;
                 }
             }
         }
@@ -69,7 +69,7 @@ main {
                     margin-left: 1%;    
                 }
                 @include mobile {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     margin-left: 0px;
                 }
                 li{
