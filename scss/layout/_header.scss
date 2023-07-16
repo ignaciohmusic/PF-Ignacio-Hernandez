@@ -1,0 +1,33 @@
+header {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    grid-area: header;
+    @include desktop {
+        font-size: 0.9rem;
+    }
+    @include mobile {
+        font-size: 1.5rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .navbar {
+        .navbar-nav {
+            align-items: center;
+            .nav-link {
+                font-size: 1rem;
+                padding: 0.5rem 1rem ;
+            } 
+            .navbar-brand{
+                padding: 0 1rem;
+                .logoNav {
+                    margin-left: 12%;
+                }
+            }
+        }
+    }     
+}
+

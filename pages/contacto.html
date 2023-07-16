@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./quienes_somos.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./servicio.html">Servicio</a></li> 
                  <a class="navbar-brand d-none d-lg-block" href="../index.html">
-                    <img src="../assets/images/logo empres.jpg" alt="Logo de la empresa">               
+                    <img class="logoNav" src="../assets/images/logo empres.jpg" alt="Logo de la empresa">               
                   </a> 
                     <li class="nav-item"><a  class="nav-link active link-light" aria-current="page"  href="./fotos.html">Fotos</a></li>
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./eventos.html">Eventos</a></li>
@@ -71,21 +71,21 @@
                 <div>
                     <div class="formulario">
                         <form action="" method="post" enctype="multipart/form-data"></form>
-                        <div id="name">
-                                 <label for="NAME" class="titulosFormulario">Nombre y Apellido</label>
-                                 <input type="name" name="name" placeholder="Nombre y Apellido" id="NAME" required>
-                        </div>
-                        <div id="email">
-                                 <label for="EMAIL" class="titulosFormulario">Correo Electronico</label>
-                                 <input type="email" name="email" placeholder="Correo Electronico" id="EMAIL" required>
-                        </div>
-                        <div id="telefono" >
-                                 <label for="TELEFONO" class="titulosFormulario">Telefono de Contacto</label>
-                                 <input type="telefono" name="telefono" placeholder="Telefono de Contacto" id="Telefono" required>                       
-                        </div> 
+                          <div class="divFormulario">
+                            <label for="NAME" class="titulosFormulario">Nombre y Apellido</label>
+                            <input type="name" name="name" placeholder="Nombre y Apellido" id="NAME" required>
+                          </div>
+                          <div class="divFormulario">
+                            <label for="EMAIL" class="titulosFormulario">Correo Electronico</label>
+                            <input type="email" name="email" placeholder="Correo Electronico" id="EMAIL" required>
+                          </div>
+                          <div class="divFormulario" >
+                            <label for="TELEFONO" class="titulosFormulario">Telefono de Contacto</label>
+                            <input type="telefono" name="telefono" placeholder="Telefono de Contacto" id="Telefono" required>                       
+                          </div> 
                         <br>
                         <div>
-                                 <label for="MENSAJE" class="titulosFormulario">Mensaje</label>
+                            <label for="MENSAJE" class="titulosFormulario">Mensaje</label>
                             <div class="mensaje">
                                  <textarea name="Mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu Consulta"></textarea>
                             </div>
@@ -96,14 +96,13 @@
                 </div>       
         </section>>
     </main>
-<footer>
-    <footer class="footer"> 
-        <div class="redes">
-            <a href="" target="_blank"><img src="./assets/ico/whatsapp.ico" alt=""></a>
-            <a href="https://www.instagram.com/conceptofiestarosario/" target="_blank"><img src="./assets/ico/intagram.ico" alt=""></a>        
-        </div>
-        <p class="copy">&copy; 2023 Concepto Fiesta</p>
-    </footer>
+<footer class="footer"> 
+  <div class="redes">
+      <a href="" target="_blank"><img src="../assets/ico/whatsapp.ico" alt="whatsapp"></a>
+      <a href="https://www.instagram.com/conceptofiestarosario/" target="_blank"><img src="../assets/ico/intagram.ico" alt="Instagram"></a>        
+  </div>
+  <p class="copy">&copy; 2023 Concepto Fiesta</p>
+</footer>
 <script 
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 

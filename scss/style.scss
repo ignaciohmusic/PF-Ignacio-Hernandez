@@ -1,0 +1,21 @@
+/*abstracts*/
+@import './abstracts/variables';
+@import './abstracts/mixin';
+
+/*base*/
+@import './base/reset';
+@import './base/base';
+
+
+/*layout*/
+@import './layout/header';
+@import './layout/main';
+@import './layout/footer';
+
+
+/*componentes*/
+@import './componentes/nosotros';
+@import './componentes/servicio';
+@import './componentes/fotos';
+@import './componentes/eventos';
+@import './componentes/contacto';

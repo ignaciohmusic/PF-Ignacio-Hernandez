@@ -1,0 +1,50 @@
+#eventos {
+    background-image: url("../assets/images/IMG_20221223_214927242.jpg");
+    @include caracteristicas-background-image; 
+    
+    .eventosOpacity {
+        display: flex;
+        flex-direction: column;
+        @include background-gradient;
+        height: 100%; 
+        .tituloEventos {
+            @include d-flex-row-all-center;
+            height: 12%;
+            width: 100%;
+            font-size: 1rem;   
+        }
+    }
+    .divTextEventos{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        .textoEventos{
+            height: 100%;
+            width: 80%;
+            @include d-flex-row-all-center;
+            font-size: 1.1rem;
+            @include desktop {
+                font-size: 0.9rem;
+            }
+            @include mobile {
+                font-size: 0.65rem;
+            }
+        }   
+    }
+    .videoEventos{
+        height: 62%;
+        @include d-flex-row-all-center;
+        .video{
+            width: 560px;
+            height: 315px;
+            @include mobile {
+                height:220px;
+                width: 400px;
+        }
+        }
+
+
+    }
+    
+}

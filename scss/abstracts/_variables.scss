@@ -1,0 +1,13 @@
+$gris-oscuro: #363636;
+$white: #ffffff;
+$black: #000000;
+$gris-claro: #aaaaaa;
+$naranja: #fc9b00;
+$gradient-gris-claro: radial-gradient(
+    circle, 
+    rgba(170, 170, 170, 0.43181) 13%,
+    rgba(170, 170, 170, 0.4) 82%);
+$gradient-gris-oscuro: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.87) 13%,
+    rgba(0,0,0,0.6362920168067228) 82%);

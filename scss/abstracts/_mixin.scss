@@ -1,0 +1,63 @@
+@mixin caracteristicas-background-image {
+    font-size: 1rem;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@mixin background-gradient {
+    background: $black;
+    background: $gradient-gris-oscuro;
+}
+
+@mixin background-gradient-claro {
+    background: $gris-claro;
+    background: $gradient-gris-claro;
+}
+
+@mixin detalles-iconos {
+    display: flex;
+    background-color: $white;
+    border: 5px solid $gris-oscuro;
+    border-radius: 5px;
+}
+
+@mixin d-flex-row-all-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin titulos-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    align-items: center;
+}
+
+@mixin d-flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin desktop {
+    @media screen and (max-width:1440px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width:425px){
+        @content;
+    }
+}

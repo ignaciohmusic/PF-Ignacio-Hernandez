@@ -1,0 +1,115 @@
+#imagenContacto {
+    background-image: url("../assets/images/contacto.jpg");
+    @include caracteristicas-background-image; 
+
+    .datosOpacity{
+        display: flex;
+        flex-direction: column;
+        @include background-gradient;
+        width: 100%;
+        height: 100%;
+        .contactoTitulo {
+            display: flex;
+            justify-content: center;
+            color: $white;
+            @include mobile {
+                font-size: 2rem;  
+                margin-top: 2%;
+            }
+        }
+        .divFormDatos{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            margin-left: 32.5%;
+            width: 49%;
+            margin-top: 7%;
+            @include desktop {
+                margin-top: 0%;
+                margin-left: 33%;
+                height: 87%;
+                font-size: .8rem;
+            }
+            @include mobile {
+                flex-direction: column;
+                margin-left: 24%;
+                align-items: center;
+                height: 100%;
+            }
+            .datos{
+                @include d-flex-col-center;
+                margin-bottom: 26.5%;
+                margin-left: 3%;
+                @include desktop {
+                        margin-bottom: 19%;
+                        font-size: 0.8rem;
+                }
+                @include mobile {
+                    align-items: center;
+                    margin-bottom: 0%;
+                    font-size: 1.5rem;
+                }
+            }
+            .formulario {
+                @include d-flex-col-center;
+                font-size: 1rem;
+                align-items: center;
+                @include desktop {
+                    font-size: 0.5rem;
+                }
+                @include mobile {
+                    font-size: 1.2rem;
+                    align-items: center;
+                }
+                .divFormulario {
+                    @include d-flex-col-center;
+                    width: 90%;
+                    height: 12%;
+                    .titulosFormulario  {
+                        @include titulos-formulario;
+                    }
+                }
+                div {
+                    input {
+                        display: grid;
+                        padding: 8px 8px 8px 8px;
+                        border-radius: 5px;
+                        width: 300px;
+                    }
+                }
+                div {
+                    @include titulos-formulario;
+                    .mensaje{
+                        display: grid;
+                        justify-items: center;
+                        textarea {
+                            display: grid;
+                            justify-content: center;
+                            width: 300px;
+                            @include desktop {
+                                height: 135px;
+                            }
+
+                        }
+                    }
+                    .enviar {
+                        display: flex;
+                        justify-items: center;
+                        padding: 10px 10px 10px 10px;
+                        flex-direction: column;
+                        align-items: center;
+                        .wEnviar {
+                            width: 200px;
+                            @include desktop {
+                                font-size: 0.7rem;
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

@@ -1,0 +1,163 @@
+#servicio {
+    background-image: url("../assets/images/Agustina\ XV\ \(283\).jpg");
+    @include caracteristicas-background-image; 
+
+    .servicioOpacity {
+        display: flex;
+        flex-direction: column;
+        @include background-gradient;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        .tituloServicio{
+            grid-area: titulo;
+            @include d-flex-row-all-center;
+            height: 12%;
+            font-size: 1rem;
+            @include desktop {
+                height: 14%;
+                width: 100%;
+                font-size: 1rem;
+            }
+            @include mobile {
+
+            }
+        }
+        .divServicio {
+            grid-area: texto;
+            height: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            @include desktop {
+                height: 64%;
+            }
+            @include mobile {
+
+            }
+            .textoServicio{
+                height: 100%;
+                width: 80%;
+                @include d-flex-row-all-center;
+                font-size: 1.1rem;
+                @include mobile  {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        .iconos{
+            grid-area: iconos;
+            display: grid;
+            grid-template-columns: 42% 6% 6% 42%;
+            grid-template-areas: 
+            "sonido iluminacion estructuras energia"
+            "titulo1 titulo2 titulo3 titulo4";
+            @include desktop {
+                grid-template-columns: 42% 8% 8% 42%;   
+            }
+            @include mobile {
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+            .divSonido{
+                grid-area: sonido;
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                @include desktop {
+                    width: 99%;
+                }
+                @include mobile {
+                    width: 100%;
+                }
+                .sonido{
+                    @include detalles-iconos; 
+                    width: 12%;
+                    @include mobile {
+                        width: 65%;
+                    }
+                }
+            }
+            .tituloSonido{
+                grid-area: titulo1;
+                display: flex;
+                font-size: 1rem;
+                margin-left: 91.1%;
+                @include desktop {
+                    width: 98%;
+                }
+                @include mobile {
+                    margin-left: 43%;
+                }
+            }
+            .divIluminacion{
+                grid-area: iluminacion;
+                display: flex;
+                justify-content: center;
+                .iluminacion {
+                    @include detalles-iconos; 
+                    width: 85%;
+                    @include mobile  {
+                        width: 85%;
+                    }
+                }
+                @include desktop {
+                    width: 75%;
+                    margin-left: 12%;
+                }
+                @include mobile {
+                    width: 76%;
+                }
+            }
+            .tituloIluminacion{
+                grid-area: titulo2;
+                display: flex;
+                font-size: 1rem;
+                justify-content: center;
+            }
+            .divEstructuras{
+                grid-area: estructuras;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                .estructuras{
+                    @include detalles-iconos; 
+                    width: 76%;
+                }
+                @include desktop {
+                    width: 75%;
+                    margin-left: 10%;
+                }
+            }
+            .tituloEstructuras{
+                grid-area: titulo3;
+                display: flex;
+                font-size: 1rem;
+                justify-content: center;
+            }
+            .divEnergia{
+                grid-area: energia;
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                .energia{
+                    @include detalles-iconos; 
+                    width: 12%;
+                    @include mobile {
+                        width: 65%;
+                    }
+                }
+
+            }
+            .tituloEnergia{
+                grid-area: titulo4;
+                display: flex;
+                margin-left: 2.5%;
+                font-size: 1rem;
+                @include mobile {
+                    margin-left: 6.5%;
+                }
+            }
+
+        }
+    }
+}

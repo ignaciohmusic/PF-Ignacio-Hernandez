@@ -1,0 +1,24 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 8% 84% 8% ;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    @include desktop {
+        grid-template-rows: 14% 86% 12%;
+    }
+
+    @include mobile {
+        height: 100vh;
+        grid-template-rows: 8% 84% 8%;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+}

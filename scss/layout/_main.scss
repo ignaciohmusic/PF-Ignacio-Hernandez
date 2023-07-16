@@ -1,0 +1,112 @@
+main {
+    font-size: 1rem;
+    grid-area: main;  
+    color: $white 
+}
+#imagenInicio{
+    background-image: url("../assets/images/Agustina\ XV\ \(270\).jpg");
+    @include caracteristicas-background-image; 
+
+    .bannerOpacity{
+        display: flex;
+        flex-direction: column;
+        @include background-gradient-claro;
+        height: 22%;
+        @include desktop {
+            height: 31%;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        @include mobile {
+            justify-content: center;
+            height: 30%;
+        }
+
+        .textoBanner{
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            margin-left: 10%;
+            color: $white;
+            @include desktop {
+                font-size: 0.8rem;
+                margin-left: 4%;
+                margin-top: 0.5%;
+                height: 68%; 
+            }
+            @include mobile {
+                font-size: 1.3rem;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+            .tituloBanner {
+                font-size: 2rem;
+                @include desktop {
+                    font-size: 1.3rem;
+                }
+                @include mobile {
+                    font-size: 2.3rem;
+                }
+            }
+        }
+        .divPresupuesto{
+            margin-left: 8%;
+            @include desktop {
+                margin-left: 0.7%;   
+            }
+            @include mobile {
+                margin-left: -4%;
+            }
+            .pedirPresupuesto{
+                display: flex;
+                grid-area: boton;
+                list-style-type: none;
+                width: 100%;
+                font-size: 1rem;
+                @include desktop {
+                    font-size: 0.7rem;
+                    margin-left: 1%;    
+                }
+                @include mobile {
+                    font-size: 1.3rem;
+                    margin-left: 0px;
+                }
+                li{
+                    a{
+                        display: flex;
+                        list-style-type: none;
+                        text-decoration: none;
+                        background-color: $naranja;
+                        color: $white;
+                        padding: 6px 70px 6px 70px;
+                        border-radius: 5px;   
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

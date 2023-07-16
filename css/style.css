@@ -1,747 +1,596 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'DM Serif Text', serif;
-}
-body {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 8% 84% 8% ;
-    grid-template-columns: repeat(3, 1fr) ;
-    grid-template-areas:
-    "header header header"
-    "main main main"
-    "footer footer footer";
-}
-header {
-    background-color: black;
-    position: sticky;
-    top: 0;
-    grid-area: header;
-}
-header nav {
-    width: 100%;
-}
-.navbar-brand{
-    margin-right: 0;
-    padding: 0 1rem;
-}
-.navbar-nav{
-    align-items: center;   
-}
-.navbar .navbar-nav -nav-link{
-    font-size: 1rem;
-    padding: 0.5rem 1rem ;
-}
-main {
-    font-size: 1rem;
-    grid-area: main;
-}
-#imagenInicio{
-    font-size: 1rem;
-    background-image: url("../assets/images/Agustina\ XV\ \(270\).jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.bannerOpacity{
-    display: flex;
-    flex-direction: column;
-    background: rgb(170,170,170);
-    background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
-    height: 22%;
-}
-main div {
-    color: white;
-}
-.tituloBanner {
-    font-size: 2rem;
-}
-.textoBanner{
-    display: flex;
-    grid-area: texto;
-    flex-direction: column;
-    font-size: 1rem;
-    margin-left: 10%;
-}
-.divPresupuesto{
-    margin-left: 8%;
-}
-.pedirPresupuesto{
-    display: flex;
-    grid-area: boton;
-    list-style-type: none;
-    width: 100%;
-    font-size: 1rem;
-}
-main ul li a {
-    display: flex;
-    list-style-type: none;
-    text-decoration: none;
-    background-color: #fc9b00;
-    color: white;
-    padding: 6px 70px 6px 70px;
-    border-radius: 5px;
-}
-#imagenNosotros {
-    font-size: 1rem;
-    background-image: url("../assets/images/IMG_20221215_233005970.jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.nosotrosOpacity {
-    display: flex;
-    flex-direction: row;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
-    width: 100%;
-    height: 100%; 
-}
-.nosotros{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 100%;
+/*abstracts*/
+/*base*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'DM Serif Text', serif; }
 
-}
-.logoNosotros {
-    font-size: 1rem;
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 8% 84% 8%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "main main main" "footer footer footer"; }
+  @media screen and (max-width: 1440px) {
+    body {
+      grid-template-rows: 14% 86% 12%; } }
+  @media screen and (max-width: 425px) {
+    body {
+      height: 100vh;
+      grid-template-rows: 8% 84% 8%;
+      grid-template-columns: 100%;
+      grid-template-areas: "header" "main" "footer"; } }
+
+/*layout*/
+header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+  grid-area: header; }
+  @media screen and (max-width: 1440px) {
+    header {
+      font-size: 0.9rem; } }
+  @media screen and (max-width: 425px) {
+    header {
+      font-size: 1.5rem; } }
+  header nav {
+    width: 100%; }
+  header .navbar .navbar-nav {
+    align-items: center; }
+    header .navbar .navbar-nav .nav-link {
+      font-size: 1rem;
+      padding: 0.5rem 1rem; }
+    header .navbar .navbar-nav .navbar-brand {
+      padding: 0 1rem; }
+      header .navbar .navbar-nav .navbar-brand .logoNav {
+        margin-left: 12%; }
+
+main {
+  font-size: 1rem;
+  grid-area: main;
+  color: #ffffff; }
+
+#imagenInicio {
+  background-image: url("../assets/images/Agustina XV (270).jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #imagenInicio .bannerOpacity {
     display: flex;
-    width: 50%;
-    height: 100%;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-}
-.logoEmpresaNosotros {
-    font-size: 1rem;
+    flex-direction: column;
+    background: #aaaaaa;
+    background: radial-gradient(circle, rgba(170, 170, 170, 0.43181) 13%, rgba(170, 170, 170, 0.4) 82%);
+    height: 22%; }
+    @media screen and (max-width: 1440px) {
+      #imagenInicio .bannerOpacity {
+        height: 31%;
+        flex-direction: column;
+        flex-wrap: nowrap; } }
+    @media screen and (max-width: 425px) {
+      #imagenInicio .bannerOpacity {
+        justify-content: center;
+        height: 30%; } }
+    #imagenInicio .bannerOpacity .textoBanner {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      margin-left: 10%;
+      color: #ffffff; }
+      @media screen and (max-width: 1440px) {
+        #imagenInicio .bannerOpacity .textoBanner {
+          font-size: 0.8rem;
+          margin-left: 4%;
+          margin-top: 0.5%;
+          height: 68%; } }
+      @media screen and (max-width: 425px) {
+        #imagenInicio .bannerOpacity .textoBanner {
+          font-size: 1.3rem;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%; } }
+      #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
+        font-size: 2rem; }
+        @media screen and (max-width: 1440px) {
+          #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
+            font-size: 1.3rem; } }
+        @media screen and (max-width: 425px) {
+          #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
+            font-size: 2.3rem; } }
+    #imagenInicio .bannerOpacity .divPresupuesto {
+      margin-left: 8%; }
+      @media screen and (max-width: 1440px) {
+        #imagenInicio .bannerOpacity .divPresupuesto {
+          margin-left: 0.7%; } }
+      @media screen and (max-width: 425px) {
+        #imagenInicio .bannerOpacity .divPresupuesto {
+          margin-left: -4%; } }
+      #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
+        display: flex;
+        grid-area: boton;
+        list-style-type: none;
+        width: 100%;
+        font-size: 1rem; }
+        @media screen and (max-width: 1440px) {
+          #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
+            font-size: 0.7rem;
+            margin-left: 1%; } }
+        @media screen and (max-width: 425px) {
+          #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
+            font-size: 1.3rem;
+            margin-left: 0px; } }
+        #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto li a {
+          display: flex;
+          list-style-type: none;
+          text-decoration: none;
+          background-color: #fc9b00;
+          color: #ffffff;
+          padding: 6px 70px 6px 70px;
+          border-radius: 5px; }
+
+footer {
+  background-color: black;
+  grid-area: footer; }
+
+.footer {
+  display: flex;
+  flex-direction: column; }
+  .footer .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px; }
+  .footer .copy {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; }
+
+/*componentes*/
+#imagenNosotros {
+  background-image: url("../assets/images/IMG_20221215_233005970.jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #imagenNosotros .nosotrosOpacity {
+    display: flex;
+    flex-direction: row;
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
     width: 100%;
-}
-.botonesRedes {
-    display: flex;
-    margin-top: 10px;
-    width: 100%;
-    height: 100%;
-}
-.whatsapp { 
-    width: 13%;
-    margin-top: 2%;
-    margin-left: 85%;
-}
-.whats1 {
-    width: 62%;
-}
-.instagram {
-    width: 13%;
-    margin-top: 2%;
-    margin-left: 3%;  
-}
-.insta1{
-    width: 62%;
-}
-.textoNosotros {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    font-size: 1.8rem;
-    width: 100%;
-    height: 92%;
-}
-#imagenContacto {
-    font-size: 1rem;
-    background-image: url("../assets/images/contacto.jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.datosOpacity{
-    display: flex;
-    flex-direction: column;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
-    width: 100%;
-    height: 100%;
-}
-.contactoTitulo {
-    display: flex;
-    justify-content: center;
-    color: white;
-}
-.divFormDatos{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-left: 32.5%;
-    width: 49%;
-    margin-top: 7%;
-}
-.formulario {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 1rem;
-    align-items: center;
-}
-main input {
-    display: grid;
-    padding: 8px 8px 8px 8px;
-    border-radius: 5px;
-    width: 300px;
-}
-#email {
-    display: flex;
-    width: 90%;
-    height: 12%;
-    flex-direction: column;
-    align-items: center;
-}
-#name {
-    display: flex;
-    width: 90%;
-    height: 12%;
-    flex-direction: column;
-    align-items: center;
-}
-#telefono{
-    display: flex;
-    width: 90%;
-    height: 12%;
-    align-items: center;
-    flex-direction: column;
-}
-.mensaje{
-    display: grid;
-    justify-items: center;
-}
-div textarea{
-    display: grid;
-    justify-content: center;
-    width: 300px;
-}
-.titulosFormulario{
-    display: flex;
-    font-size: 1rem;
-    flex-direction: column;
-    align-items: center;
-}
-.enviar {
-    display: flex;
-    justify-items: center;
-    padding: 10px 10px 10px 10px;
-    flex-direction: column;
-    align-items: center;
-}
-.wEnviar{
-    width: 200px;
-}
-.datos{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 26.5%;
-    margin-left: 3%;
-}
+    height: 100%; }
+    @media screen and (max-width: 425px) {
+      #imagenNosotros .nosotrosOpacity {
+        flex-direction: column; } }
+    #imagenNosotros .nosotrosOpacity .nosotros {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+      width: 50%; }
+      @media screen and (max-width: 425px) {
+        #imagenNosotros .nosotrosOpacity .nosotros {
+          width: 100%; } }
+      #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros {
+        font-size: 1rem;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        flex-wrap: nowrap;
+        align-items: flex-end; }
+        #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros .logoEmpresaNosotros {
+          font-size: 1rem;
+          width: 100%; }
+      #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes {
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        height: 100%; }
+        #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo {
+          width: 62%; }
+          #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo .whatsapp {
+            width: 13%;
+            margin-top: 2%;
+            margin-left: 85%; }
+          #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo .instagram {
+            width: 13%;
+            margin-top: 2%;
+            margin-left: 3%; }
+    #imagenNosotros .nosotrosOpacity .textoNosotros {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: #ffffff;
+      font-size: 1.8rem;
+      width: 100%;
+      height: 92%; }
+      @media screen and (max-width: 1440px) {
+        #imagenNosotros .nosotrosOpacity .textoNosotros {
+          font-size: 1.4rem; } }
+      @media screen and (max-width: 425px) {
+        #imagenNosotros .nosotrosOpacity .textoNosotros {
+          font-size: 1.2rem; } }
+
 #servicio {
-    font-size: 1rem;
-    background-image: url("../assets/images/Agustina\ XV\ \(283\).jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.servicioOpacity {
+  background-image: url("../assets/images/Agustina XV (283).jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #servicio .servicioOpacity {
     display: flex;
     flex-direction: column;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
     width: 100%;
-    height: 100%; 
-}
-.tituloServicio{
-    grid-area: titulo;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 12%;
-    width: 100%;
-    font-size: 1rem;
-}
-.divServicio {
-    grid-area: texto;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-.textoServicio{
     height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-}
-.iconos{
-    grid-area: iconos;
-    display: grid;
-    grid-template-rows: 76% 50%;
-    grid-template-columns: 42% 6% 6% 42%;
-    grid-template-areas: 
-    "sonido iluminacion estructuras energia"
-    "titulo1 titulo2 titulo3 titulo4";
-}
-.divSonido{
-    grid-area: sonido;
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-content: flex-start;
-    width: 100%;
-}
-.sonido{
-    background-color: white;
-    border: 5px solid #363636;
-    border-radius: 5px;
-    position: relative;
-    width: 12%;
-    display: flex;
-}
-.tituloSonido{
-    grid-area: titulo1;
-    display: flex;
-    width: 100%;
-    font-size: 1rem;
-    flex-direction: row;
-    justify-content: end;
-}
-.divEnergia{
-    grid-area: energia;
-    display: flex;
-    flex-flow: row wrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-content: flex-start;
-    width: 100%;
-}
-.energia{
-    background-color: white;
-    border: 5px solid #363636;
-    border-radius: 5px;
-    width: 12%;
-    display: flex;
-}
-.tituloEnergia{
-    grid-area: titulo4;
-    display: flex;
-    font-size: 1rem;
-}
-.divEstructuras{
-    grid-area: estructuras;
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.estructuras{
-    border: 5px solid #363636;
-    border-radius: 5px;
-    width: 76%;
-    display: flex;
-}
-.tituloEstructuras{
-    grid-area: titulo3;
-    display: flex;
-    font-size: 1rem;
-    justify-content: center;
-}
-.divIluminacion{
-    grid-area: iluminacion;
-    display: flex;
-    width: 100%;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-.iluminacion{
-    background-color: white;
-    border: 5px solid #363636;
-    border-radius: 5px;
-    width: 85%;
-    display: flex;
-}
-.tituloIluminacion{
-    grid-area: titulo2;
-    display: flex;
-    font-size: 1rem;
-    justify-content: center;
-}
+    color: #ffffff; }
+    #servicio .servicioOpacity .tituloServicio {
+      grid-area: titulo;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 12%;
+      font-size: 1rem; }
+      @media screen and (max-width: 1440px) {
+        #servicio .servicioOpacity .tituloServicio {
+          height: 14%;
+          width: 100%;
+          font-size: 1rem; } }
+    #servicio .servicioOpacity .divServicio {
+      grid-area: texto;
+      height: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
+      @media screen and (max-width: 1440px) {
+        #servicio .servicioOpacity .divServicio {
+          height: 64%; } }
+      #servicio .servicioOpacity .divServicio .textoServicio {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem; }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .divServicio .textoServicio {
+            font-size: 0.9rem; } }
+    #servicio .servicioOpacity .iconos {
+      grid-area: iconos;
+      display: grid;
+      grid-template-columns: 42% 6% 6% 42%;
+      grid-template-areas: "sonido iluminacion estructuras energia" "titulo1 titulo2 titulo3 titulo4"; }
+      @media screen and (max-width: 1440px) {
+        #servicio .servicioOpacity .iconos {
+          grid-template-columns: 42% 8% 8% 42%; } }
+      @media screen and (max-width: 425px) {
+        #servicio .servicioOpacity .iconos {
+          grid-template-columns: 25% 25% 25% 25%; } }
+      #servicio .servicioOpacity .iconos .divSonido {
+        grid-area: sonido;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%; }
+        @media screen and (max-width: 1440px) {
+          #servicio .servicioOpacity .iconos .divSonido {
+            width: 99%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .divSonido {
+            width: 100%; } }
+        #servicio .servicioOpacity .iconos .divSonido .sonido {
+          display: flex;
+          background-color: #ffffff;
+          border: 5px solid #363636;
+          border-radius: 5px;
+          width: 12%; }
+          @media screen and (max-width: 425px) {
+            #servicio .servicioOpacity .iconos .divSonido .sonido {
+              width: 65%; } }
+      #servicio .servicioOpacity .iconos .tituloSonido {
+        grid-area: titulo1;
+        display: flex;
+        font-size: 1rem;
+        margin-left: 91.1%; }
+        @media screen and (max-width: 1440px) {
+          #servicio .servicioOpacity .iconos .tituloSonido {
+            width: 98%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .tituloSonido {
+            margin-left: 43%; } }
+      #servicio .servicioOpacity .iconos .divIluminacion {
+        grid-area: iluminacion;
+        display: flex;
+        justify-content: center; }
+        #servicio .servicioOpacity .iconos .divIluminacion .iluminacion {
+          display: flex;
+          background-color: #ffffff;
+          border: 5px solid #363636;
+          border-radius: 5px;
+          width: 85%; }
+          @media screen and (max-width: 425px) {
+            #servicio .servicioOpacity .iconos .divIluminacion .iluminacion {
+              width: 85%; } }
+        @media screen and (max-width: 1440px) {
+          #servicio .servicioOpacity .iconos .divIluminacion {
+            width: 75%;
+            margin-left: 12%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .divIluminacion {
+            width: 76%; } }
+      #servicio .servicioOpacity .iconos .tituloIluminacion {
+        grid-area: titulo2;
+        display: flex;
+        font-size: 1rem;
+        justify-content: center; }
+      #servicio .servicioOpacity .iconos .divEstructuras {
+        grid-area: estructuras;
+        display: flex;
+        width: 100%;
+        justify-content: center; }
+        #servicio .servicioOpacity .iconos .divEstructuras .estructuras {
+          display: flex;
+          background-color: #ffffff;
+          border: 5px solid #363636;
+          border-radius: 5px;
+          width: 76%; }
+        @media screen and (max-width: 1440px) {
+          #servicio .servicioOpacity .iconos .divEstructuras {
+            width: 75%;
+            margin-left: 10%; } }
+      #servicio .servicioOpacity .iconos .tituloEstructuras {
+        grid-area: titulo3;
+        display: flex;
+        font-size: 1rem;
+        justify-content: center; }
+      #servicio .servicioOpacity .iconos .divEnergia {
+        grid-area: energia;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%; }
+        #servicio .servicioOpacity .iconos .divEnergia .energia {
+          display: flex;
+          background-color: #ffffff;
+          border: 5px solid #363636;
+          border-radius: 5px;
+          width: 12%; }
+          @media screen and (max-width: 425px) {
+            #servicio .servicioOpacity .iconos .divEnergia .energia {
+              width: 65%; } }
+      #servicio .servicioOpacity .iconos .tituloEnergia {
+        grid-area: titulo4;
+        display: flex;
+        margin-left: 2.5%;
+        font-size: 1rem; }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .tituloEnergia {
+            margin-left: 6.5%; } }
+
 #fotos {
+  background-image: url("../assets/images/Agustina XV (4).jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #fotos .galeriaOpacity {
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
     width: 100%;
-    height: auto;
-    font-size: 1rem;
-    background-image: url("../assets/images/Agustina\ XV\ \(4\).jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.galeriaOpacity{
-    background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.87) 82%);
-    width: 100%;
-    height: 80px;
-}
-.tituloFotos{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 1rem;
-}
-#boton1 {
-    /* width: 21%; */
-}
-#boton2 {
-    /* width: 21%; */
-}
-#modalCentrar{
-    position: relative;
-    top: 200px;
-}
-.eventos{
-    width: 100%;
+    height: 80px; }
+    #fotos .galeriaOpacity .tituloFotos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      font-size: 1rem; }
+  #fotos .eventos {
+    width: 70%;
     height: 100%;
     padding: auto;
-    border-radius: 30px;
-}
+    border-radius: 30px; }
+    @media screen and (max-width: 425px) {
+      #fotos .eventos {
+        border-radius: 10px; } }
+  #fotos #boton1 {
+    height: 100%;
+    margin-top: 6%;
+    position: relative;
+    left: -15%; }
+    @media screen and (max-width: 425px) {
+      #fotos #boton1 {
+        margin-top: 20%;
+        left: 0%; } }
+  #fotos #modalCentrar {
+    position: relative;
+    top: 200px; }
+  @media screen and (max-width: 425px) {
+    #fotos .col-3 {
+      width: 70%; } }
+  #fotos #boton2 {
+    height: 100%;
+    margin-top: -26.8%;
+    position: relative;
+    right: -15%; }
+    @media screen and (max-width: 425px) {
+      #fotos #boton2 {
+        margin-top: 6%;
+        right: 0%; } }
+
 #eventos {
-    font-size: 1rem;
-    background-image: url("../assets/images/IMG_20221223_214927242.jpg");
-    background-repeat:no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.eventosOpacity {
+  background-image: url("../assets/images/IMG_20221223_214927242.jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #eventos .eventosOpacity {
     display: flex;
     flex-direction: column;
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,0.87) 13%, rgba(0,0,0,0.6362920168067228) 82%);
-    width: 100%;
-    height: 100%; 
-}
-.tituloEventos {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 12%;
-    width: 100%;
-    font-size: 1rem;
-    
-}
-.divTextEventos{
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
+    height: 100%; }
+    #eventos .eventosOpacity .tituloEventos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 12%;
+      width: 100%;
+      font-size: 1rem; }
+  #eventos .divTextEventos {
     height: 40%;
     width: 100%;
     display: flex;
-    justify-content: center;   
-}
-.textoEventos{
-    height: 100%;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.1rem;
-}
-.videoEventos{
+    justify-content: center; }
+    #eventos .divTextEventos .textoEventos {
+      height: 100%;
+      width: 80%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem; }
+      @media screen and (max-width: 1440px) {
+        #eventos .divTextEventos .textoEventos {
+          font-size: 0.9rem; } }
+      @media screen and (max-width: 425px) {
+        #eventos .divTextEventos .textoEventos {
+          font-size: 0.65rem; } }
+  #eventos .videoEventos {
     height: 62%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-}
-footer {
-    background-color: rgb(0, 0, 0);
-    grid-area: footer;
-}
-.footer{
+    align-items: center; }
+    #eventos .videoEventos .video {
+      width: 560px;
+      height: 315px; }
+      @media screen and (max-width: 425px) {
+        #eventos .videoEventos .video {
+          height: 220px;
+          width: 400px; } }
+
+#imagenContacto {
+  background-image: url("../assets/images/contacto.jpg");
+  font-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed; }
+  #imagenContacto .datosOpacity {
     display: flex;
     flex-direction: column;
-}
-.copy{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    color: white;
-}
-.redes{
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    flex-direction: row;
-    justify-content: center;
-}
-@media screen and (max-width:1440px) {
-    body {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 14% 76% 12%;
-        grid-template-columns: repeat(3, 1fr) ;
-        grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
-    }
-    .bannerOpacity{
+    background: #000000;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
+    width: 100%;
+    height: 100%; }
+    #imagenContacto .datosOpacity .contactoTitulo {
+      display: flex;
+      justify-content: center;
+      color: #ffffff; }
+      @media screen and (max-width: 425px) {
+        #imagenContacto .datosOpacity .contactoTitulo {
+          font-size: 2rem;
+          margin-top: 2%; } }
+    #imagenContacto .datosOpacity .divFormDatos {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      margin-left: 32.5%;
+      width: 49%;
+      margin-top: 7%; }
+      @media screen and (max-width: 1440px) {
+        #imagenContacto .datosOpacity .divFormDatos {
+          margin-top: 0%;
+          margin-left: 33%;
+          height: 87%;
+          font-size: .8rem; } }
+      @media screen and (max-width: 425px) {
+        #imagenContacto .datosOpacity .divFormDatos {
+          flex-direction: column;
+          margin-left: 24%;
+          align-items: center;
+          height: 100%; } }
+      #imagenContacto .datosOpacity .divFormDatos .datos {
         display: flex;
-        background: rgb(170,170,170);
-        background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
-        height: 31%;
         flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    header {
-        font-size: 0.9rem;
-    }
-    .tituloBanner {
-        font-size: 1.3rem;
-    }
-    .textoBanner{
+        justify-content: center;
+        margin-bottom: 26.5%;
+        margin-left: 3%; }
+        @media screen and (max-width: 1440px) {
+          #imagenContacto .datosOpacity .divFormDatos .datos {
+            margin-bottom: 19%;
+            font-size: 0.8rem; } }
+        @media screen and (max-width: 425px) {
+          #imagenContacto .datosOpacity .divFormDatos .datos {
+            align-items: center;
+            margin-bottom: 0%;
+            font-size: 1.5rem; } }
+      #imagenContacto .datosOpacity .divFormDatos .formulario {
         display: flex;
-        grid-area: texto;
         flex-direction: column;
-        font-size: 0.8rem;
-        margin-left: 4%;
-        margin-top: 0.5%;
-        height: 68%;
-    }
-    .formulario {
-        font-size: 0.5rem;
-    }
-    .divFormDatos {
-        margin-top: 0%;
-    }
-    .divPresupuesto {
-        margin-left: 0%;
-    }
-    .pedirPresupuesto{
-        display: flex;
-        width: 100%;
-        font-size: 0.7rem;
-        margin-left: 1%;
-    }
-    .tituloServicio {
-        height: 14%;
-        width: 100%;
-        font-size: 0.9rem;
-    }
-    .divServicio {
-        height: 64%;
-        width: 100%;
-    }   
-    .iconos {
-        grid-template-columns: 42% 8% 8% 42%;
-    }
-    .estructuras {
-        width: 57%;
-    }
-    .divSonido {
-        width: 99%;
-    }
-    .tituloSonido {
-        width: 98%;
-    }
-    .iluminacion {
-        width: 61%;
-    }
-    .tituloServicio {
-        height: 14%;
-        width: 100%;
+        justify-content: center;
         font-size: 1rem;
-    }
-    .eventosOpacity {
-        display: flex;
-        flex-direction: column;
-    }
-    .tituloEventos {
-        display: flex;
-        height: 13%;
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-    .eventosTitulo{
-        font-size: 1.5rem;
-    }
-    .divTextEventos {
-        height: 72%;
-    }
-    .videoEventos{
-        display: flex;
-        height: 45%;
-        flex-direction: row;
-        align-items: center;
-    }
-    .video{
-        width: 400px;
-        height: 215px;
-    }
-    .textoEventos{
-        font-size: 0.7rem;
-    }
-    .divFormDatos{
-        margin-left: 34.5%;
-        height: 87%;
-    }
-    .datos{
-        margin-bottom: 19%;
-        font-size: 0.8rem;
-    }
-    .copy{
-        display: flex;
-        color: white;
-        margin-right: 0px;
-        font-size: 1rem;
-    }
-    .redes{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-   
-}
-@media screen and (max-width:425px)  {
-    body {
-        height: 269vh;
-        display: grid;
-        grid-template-rows: 7% 98% 7%;
-        grid-template-columns: 200.4%;
-        grid-template-areas:
-            "header"
-            "main"
-            "footer";
-    }
-    header {
-        font-size: 1.5rem;
-    }
-    .bannerOpacity{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background: rgb(170,170,170);
-        background: radial-gradient(circle, rgba(170,170,170,0.4318102240896359) 13%, rgba(170,170,170,0.4) 82%);
-        height: 22%;
-    }
-    .tituloBanner {
-        font-size: 3rem;
-    }
-    .textoBanner{
-        display: flex;
-        height: 100%;
-        grid-area: texto;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 2rem;
-        margin-left: 4%;
-    }
-    .pedirPresupuesto{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        font-size: 1.7rem;
-        margin-left: 0px;
-    }
-    .nosotrosOpacity {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .textoNosotros {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        color: white;
-        font-size: 1.8rem;
-        height: 89%;
-        width: 85%;
-    }
-    .nosotros {
-        width: 50%;
-        height: 40%;
-    }
-    .contactoTitulo {
-        font-size: 2rem;
-    }
-    .divFormDatos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-left: 24%;
-        width: 49%;
-        align-items: center;
-        height: 75%;
-    }
-    .datos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 0%;
-        font-size: 1.5rem;
-    }
-    .formulario {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-size: 1.2rem;
-        align-items: center;
-    }
-    .eventosOpacity {
-        display: flex;
-        flex-direction: column;
-    }
-    .tituloEventos {
-        height: 8%;
-    }
-    .eventosTitulo{
-        font-size: 3rem;
-    }
-    .divTextEventos {
-        height: 65%;
-    }
-    .videoEventos{
-        display: flex;
-        height: 27%;
-        flex-direction: column;
-        align-items: center;
-    }
-    .textoEventos{
-        font-size: 1.5rem;
-    }
-    .copy{
-        margin-right: 0px;
-        font-size: 1.5rem;
-    }
-    .redes{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-
-}
+        align-items: center; }
+        @media screen and (max-width: 1440px) {
+          #imagenContacto .datosOpacity .divFormDatos .formulario {
+            font-size: 0.5rem; } }
+        @media screen and (max-width: 425px) {
+          #imagenContacto .datosOpacity .divFormDatos .formulario {
+            font-size: 1.2rem;
+            align-items: center; } }
+        #imagenContacto .datosOpacity .divFormDatos .formulario .divFormulario {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 90%;
+          height: 12%; }
+          #imagenContacto .datosOpacity .divFormDatos .formulario .divFormulario .titulosFormulario {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1rem;
+            align-items: center; }
+        #imagenContacto .datosOpacity .divFormDatos .formulario div input {
+          display: grid;
+          padding: 8px 8px 8px 8px;
+          border-radius: 5px;
+          width: 300px; }
+        #imagenContacto .datosOpacity .divFormDatos .formulario div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: 1rem;
+          align-items: center; }
+          #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje {
+            display: grid;
+            justify-items: center; }
+            #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje textarea {
+              display: grid;
+              justify-content: center;
+              width: 300px; }
+              @media screen and (max-width: 1440px) {
+                #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje textarea {
+                  height: 135px; } }
+          #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar {
+            display: flex;
+            justify-items: center;
+            padding: 10px 10px 10px 10px;
+            flex-direction: column;
+            align-items: center; }
+            #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
+              width: 200px; }
+              @media screen and (max-width: 1440px) {
+                #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
+                  font-size: 0.7rem; } }
