@@ -24,9 +24,14 @@ header {
     }
 
     .navbar {
-        .logoMobile{
-            width: 35%;
-            height: 1%;
+        #contenedorLogoMobile{
+            @include mobile-sm {
+                width: 72%;
+            }
+            .logoMobile{
+                width: 35%;
+                height: 1%;
+            } 
         }
         .navbar-nav {
             align-items: center;

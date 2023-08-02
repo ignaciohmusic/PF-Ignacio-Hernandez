@@ -26,6 +26,9 @@ main {
             justify-content: center;
             height: 30%;
         }
+        @include mobile-sm {
+            height: 37%;
+        }
 
         .textoBanner{
             display: flex;
@@ -51,6 +54,9 @@ main {
                 justify-content: center;
                 height: 100%;
             }
+            @include mobile-sm {
+                margin-top: 15px;
+            }
             .tituloBanner {
                 margin-top: .5%;
                 font-size: 1.8rem;
@@ -62,6 +68,9 @@ main {
                 }
                 @include mobile {
                     font-size: 2rem;
+                }
+                @include mobile-sm {
+                    font-size: 1.8rem;
                 }
             }
         }
@@ -75,6 +84,9 @@ main {
             }
             @include mobile {
                 margin-left: -4%;
+            }
+            @include mobile-sm {
+                margin-left: -5.5%;
             }
             .pedirPresupuesto{
                 display: flex;
@@ -92,6 +104,11 @@ main {
                     font-size: 1rem;
                     margin-left: 0px;
                 }
+                @include mobile-sm {
+                    margin-left: 0px;
+                    font-size: 1rem;
+                }
+
                 li{
                     a{
                         display: flex;

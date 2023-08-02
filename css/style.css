@@ -46,7 +46,10 @@ header {
       padding: 10px 10px; }
     header nav .nav-link:hover {
       transform: scale(1.1); }
-  header .navbar .logoMobile {
+  @media screen and (max-width: 375px) {
+    header .navbar #contenedorLogoMobile {
+      width: 72%; } }
+  header .navbar #contenedorLogoMobile .logoMobile {
     width: 35%;
     height: 1%; }
   header .navbar .navbar-nav {
@@ -94,6 +97,9 @@ main {
       #imagenInicio .bannerOpacity {
         justify-content: center;
         height: 30%; } }
+    @media screen and (max-width: 375px) {
+      #imagenInicio .bannerOpacity {
+        height: 37%; } }
     #imagenInicio .bannerOpacity .textoBanner {
       display: flex;
       flex-direction: column;
@@ -118,6 +124,9 @@ main {
           flex-direction: column;
           justify-content: center;
           height: 100%; } }
+      @media screen and (max-width: 375px) {
+        #imagenInicio .bannerOpacity .textoBanner {
+          margin-top: 15px; } }
       #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
         margin-top: .5%;
         font-size: 1.8rem; }
@@ -130,6 +139,9 @@ main {
         @media screen and (max-width: 425px) {
           #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
             font-size: 2rem; } }
+        @media screen and (max-width: 375px) {
+          #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
+            font-size: 1.8rem; } }
     #imagenInicio .bannerOpacity .divPresupuesto {
       margin-left: 8.6%; }
       @media screen and (max-width: 1440px) {
@@ -141,6 +153,9 @@ main {
       @media screen and (max-width: 425px) {
         #imagenInicio .bannerOpacity .divPresupuesto {
           margin-left: -4%; } }
+      @media screen and (max-width: 375px) {
+        #imagenInicio .bannerOpacity .divPresupuesto {
+          margin-left: -5.5%; } }
       #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
         display: flex;
         grid-area: boton;
@@ -157,6 +172,10 @@ main {
           #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
             font-size: 1rem;
             margin-left: 0px; } }
+        @media screen and (max-width: 375px) {
+          #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
+            margin-left: 0px;
+            font-size: 1rem; } }
         #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto li a {
           display: flex;
           list-style-type: none;
@@ -290,14 +309,6 @@ footer {
       @media screen and (max-width: 1440px) {
         #imagenNosotros .nosotrosOpacity .sectionNosotros {
           font-size: 1.4rem; } }
-      @media screen and (max-width: 425px) {
-        #imagenNosotros .nosotrosOpacity .sectionNosotros {
-          font-size: 1.5rem;
-          width: 100%;
-          height: 85%;
-          align-items: center;
-          flex-direction: column;
-          justify-content: flex-start; } }
       @media screen and (max-width: 768px) {
         #imagenNosotros .nosotrosOpacity .sectionNosotros {
           font-size: 1.5rem;
@@ -306,6 +317,17 @@ footer {
           align-items: center;
           flex-direction: column;
           justify-content: flex-start; } }
+      @media screen and (max-width: 425px) {
+        #imagenNosotros .nosotrosOpacity .sectionNosotros {
+          font-size: 1.5rem;
+          width: 100%;
+          height: 85%;
+          align-items: center;
+          flex-direction: column;
+          justify-content: flex-start; } }
+      @media screen and (max-width: 375px) {
+        #imagenNosotros .nosotrosOpacity .sectionNosotros {
+          font-size: 1.2rem; } }
       #imagenNosotros .nosotrosOpacity .sectionNosotros .textoNosotros {
         display: flex;
         flex-direction: column;
@@ -368,6 +390,11 @@ footer {
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .divServicio .textoServicio {
             font-size: 0.7rem; } }
+        @media screen and (max-width: 375px) {
+          #servicio .servicioOpacity .divServicio .textoServicio {
+            font-size: 1rem;
+            height: 92%;
+            margin-left: 7%; } }
     #servicio .servicioOpacity .iconos {
       grid-area: iconos;
       display: grid;
@@ -382,6 +409,9 @@ footer {
       @media screen and (max-width: 425px) {
         #servicio .servicioOpacity .iconos {
           grid-template-columns: 25% 25% 25% 25%; } }
+      @media screen and (max-width: 375px) {
+        #servicio .servicioOpacity .iconos {
+          margin-top: 4%; } }
       #servicio .servicioOpacity .iconos .divSonido {
         grid-area: sonido;
         display: flex;
@@ -423,6 +453,10 @@ footer {
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .tituloSonido {
             margin-left: 45%; } }
+        @media screen and (max-width: 375px) {
+          #servicio .servicioOpacity .iconos .tituloSonido {
+            margin-left: 47%;
+            font-size: .8rem; } }
       #servicio .servicioOpacity .iconos .divIluminacion {
         grid-area: iluminacion;
         display: flex;
@@ -457,6 +491,9 @@ footer {
         @media screen and (max-width: 768px) {
           #servicio .servicioOpacity .iconos .tituloIluminacion {
             margin-left: 16%; } }
+        @media screen and (max-width: 375px) {
+          #servicio .servicioOpacity .iconos .tituloIluminacion {
+            font-size: .8rem; } }
       #servicio .servicioOpacity .iconos .divEstructuras {
         grid-area: estructuras;
         display: flex;
@@ -491,6 +528,9 @@ footer {
           #servicio .servicioOpacity .iconos .tituloEstructuras {
             margin-right: 0%;
             margin-left: 6%; } }
+        @media screen and (max-width: 375px) {
+          #servicio .servicioOpacity .iconos .tituloEstructuras {
+            font-size: .8rem; } }
       #servicio .servicioOpacity .iconos .divEnergia {
         grid-area: energia;
         display: flex;
@@ -519,6 +559,9 @@ footer {
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .tituloEnergia {
             margin-left: 9%; } }
+        @media screen and (max-width: 375px) {
+          #servicio .servicioOpacity .iconos .tituloEnergia {
+            font-size: .8rem; } }
 
 #fotos {
   background-image: url("../assets/images/fotos.webp");
@@ -532,6 +575,9 @@ footer {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.87) 13%, rgba(0, 0, 0, 0.636292) 82%);
     width: 100%;
     height: 80px; }
+    @media screen and (max-width: 375px) {
+      #fotos .galeriaOpacity {
+        height: 70px; } }
     #fotos .galeriaOpacity .tituloFotos {
       display: flex;
       flex-direction: row;
@@ -569,7 +615,7 @@ footer {
     top: 150px; }
   @media screen and (max-width: 425px) {
     #fotos .col-3 {
-      width: 56%; } }
+      width: 42%; } }
   #fotos #boton2 {
     height: 100%;
     margin-top: -26.8%;
@@ -624,6 +670,10 @@ footer {
       @media screen and (max-width: 425px) {
         #eventos .divTextEventos .textoEventos {
           font-size: 0.6rem; } }
+      @media screen and (max-width: 375px) {
+        #eventos .divTextEventos .textoEventos {
+          font-size: .8rem;
+          margin-left: 8%; } }
   #eventos .videoEventos {
     height: 62%;
     display: flex;
@@ -739,12 +789,20 @@ footer {
           padding: 8px 8px 8px 8px;
           border-radius: 8px;
           width: 300px; }
+          @media screen and (max-width: 375px) {
+            #imagenContacto .datosOpacity .divFormDatos .formulario div input {
+              padding: 2px 2px 2px 2px;
+              border-radius: 8px;
+              width: 220px; } }
         #imagenContacto .datosOpacity .divFormDatos .formulario div {
           display: flex;
           flex-direction: column;
           justify-content: center;
           font-size: 1rem;
           align-items: center; }
+          @media screen and (max-width: 375px) {
+            #imagenContacto .datosOpacity .divFormDatos .formulario div {
+              font-size: .5rem; } }
           #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje {
             display: grid;
             justify-items: center; }
@@ -771,3 +829,6 @@ footer {
               @media screen and (max-width: 768px) {
                 #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
                   font-size: 1rem; } }
+              @media screen and (max-width: 375px) {
+                #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
+                  font-size: .7rem; } }

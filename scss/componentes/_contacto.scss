@@ -76,6 +76,7 @@
                     font-size: 0rem;
                     align-items: center;
                 }
+
                 .divFormulario {
                     @include d-flex-col-center;
                     width: 90%;
@@ -90,9 +91,17 @@
                         padding: 8px 8px 8px 8px;
                         border-radius: 8px;
                         width: 300px;
+                        @include mobile-sm {
+                            padding: 2px 2px 2px 2px;
+                            border-radius: 8px;
+                            width: 220px;
+                        }
                     }
                 }
                 div {
+                    @include mobile-sm {
+                        font-size: .5rem;
+                    }
                     @include titulos-formulario;
                     .mensaje{
                         display: grid;
@@ -122,6 +131,9 @@
                             }
                             @include tablet {
                                 font-size: 1rem;
+                            }
+                            @include mobile-sm {
+                                font-size: .7rem;
                             }
 
                         }

@@ -43,6 +43,11 @@
                 @include mobile  {
                     font-size: 0.7rem;
                 }
+                @include mobile-sm {
+                    font-size: 1rem;
+                    height: 92%;
+                    margin-left: 7%;
+                }
             }
         }
         .iconos{
@@ -60,6 +65,9 @@
             }
             @include mobile {
                 grid-template-columns: 25% 25% 25% 25%;
+            }
+            @include mobile-sm {
+                margin-top: 4%;
             }
             .divSonido{
                 grid-area: sonido;
@@ -101,6 +109,10 @@
                 @include mobile {
                     margin-left: 45%;
                 }
+                @include mobile-sm {
+                    margin-left: 47%;
+                    font-size: .8rem;
+                }
             }
             .divIluminacion{
                 grid-area: iluminacion;
@@ -134,6 +146,9 @@
                 justify-content: center;
                 @include tablet {
                     margin-left: 16%;
+                }
+                @include mobile-sm {
+                    font-size: .8rem;
                 }
             }
             .divEstructuras{
@@ -169,6 +184,9 @@
                     margin-right: 0%;
                     margin-left: 6%;
                 }
+                @include mobile-sm {
+                    font-size: .8rem;
+                }
             }
             .divEnergia{
                 grid-area: energia;
@@ -198,6 +216,9 @@
                 }
                 @include mobile {
                     margin-left: 9%;
+                }
+                @include mobile-sm {
+                    font-size: .8rem;
                 }
             }
 
