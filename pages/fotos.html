@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-black  ">
             <div class="container-fluid">
                 <a class="d-lg-none" href="../index.html">
-                    <img src="../assets/images/logo empres.webp" alt="Logo de la empresa">               
+                    <img class="logoMobile" src="../assets/images/logo-navbar.svg" alt="Logo de la empresa">               
                   </a> 
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./quienes_somos.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./servicio.html">Servicio</a></li> 
                  <a class="navbar-brand d-none d-lg-block" href="../index.html">
-                    <img class="logoNav" src="../assets/images/logo empres.webp" alt="Logo de la empresa">               
+                    <img class="logoNav" src="../assets/images/logo-navbar.svg" alt="Logo de la empresa">               
                   </a> 
                     <li class="nav-item"><a  class="nav-link active link-light" aria-current="page"  href="./fotos.html">Fotos</a></li>
                     <li class="nav-item"><a class="nav-link active link-light" aria-current="page" href="./eventos.html">Eventos</a></li>
@@ -53,78 +53,96 @@
   </section>
   <div class="container-fluid">
     <div class="col h-100">
-      <div class="d-flex flex-column col-3 mx-auto" id="boton1" > 
-        <button type="button" class="btn" style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0rem;"  data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <img class="eventos" src="/assets/images/eventos.webp" alt="Eventos">
-        </button>
-        <div>
-          <h1 class="d-flex justify-content-center display-6">EVENTOS</h1>
+      <section>
+        <div  id="boton1" class="d-flex flex-column col-3 mx-auto" > 
+          <button type="button" class="btn" style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0rem;"  data-bs-toggle="modal" data-bs-target="#modal1">
+          <img class="eventos" src="/assets/images/eventos.webp" alt="Eventos">
+          </button>
+          <div>
+            <h2 class="d-flex justify-content-center display-6">EVENTOS</h2>
+          </div>
         </div>
-      </div>
-      <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" id="modalCentrar">
-          <div class="modal-content">
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="/assets/images/servicio.webp" class="d-block w-100" alt="foto 1">
+        <div class="modal fade modal-lg" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+          <div class="modal-dialog" id="modalCentrar">
+            <div class="modal-content">
+                <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel1" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="/assets/images/nosotros.webp" class="d-block w-100" alt="Desfile en las escalinatas del parque españa en Rosario">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/assets/images/fotos.webp" class="d-block w-100" alt="Estructara con 9 esferas de vidrio para cumpleaño de 15">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/assets/images/inicio.webp" class="d-block w-100" alt="Cumpleaños de 15 en el Autodromo de Rosario">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                  </button>
                 </div>
-                <div class="carousel-item">
-                  <img src="/assets/images/inicio.webp" class="d-block w-100" alt="foto 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="foto 3">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
         </div>
-      </div>
-      <div class="d-flex flex-column col-3 mx-auto" id="boton2" > 
-        <button type="button" class="btn" style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0rem;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      </section>
+    </div>  
+  </div>
+  <div class="container-fluid">
+    <div class="col h-100">
+     <section>
+      <div id="boton2" class="d-flex flex-column col-3 mx-auto" > 
+        <button type="button" class="btn" style="--bs-btn-padding-y: 0rem; --bs-btn-padding-x: 0rem;" data-bs-toggle="modal" data-bs-target="#modal2">
         <img class="eventos" src="/assets/images/tecnica.webp" alt="Tecnica">
         </button>
         <div>
-          <h1 class="d-flex justify-content-center display-6">TECNICA</h1>
+          <h2 class="d-flex justify-content-center display-6">TECNICA</h2>
         </div>
       </div>
-      <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade modal-lg" id="modal2" tabindex="-1" aria-labelledby="modal1Labe2" aria-hidden="true">
         <div class="modal-dialog" id="modalCentrar">
           <div class="modal-content">
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="/assets/images/eventos-fotos.webp" class="d-block w-100" alt="foto 5">
+              <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carousel2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carousel2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carousel2" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                  <img src="/assets/images/eventos.webp" class="d-block w-100" alt="foto 6">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="/assets/images/Armado-desfile.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/assets/images/inicio.webp" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                  </div>
                 </div>
-                <div class="carousel-item">
-                  <img src="..." class="d-block w-100" alt="foto 3">
-                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
           </div>
         </div>
       </div>
-    </div>  
-  </div>   
+     </section>
+    </div> 
+  </div>  
 </main>
 <footer class="footer"> 
   <div class="redes">

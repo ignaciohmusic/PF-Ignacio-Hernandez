@@ -11,9 +11,14 @@ main {
         display: flex;
         flex-direction: column;
         @include background-gradient-claro;
-        height: 22%;
+        height: 23%;
         @include desktop {
             height: 31%;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        @include tablet {
+            height: 24%;
             flex-direction: column;
             flex-wrap: nowrap;
         }
@@ -26,13 +31,19 @@ main {
             display: flex;
             flex-direction: column;
             font-size: 1rem;
-            margin-left: 10%;
+            margin-left: 10.4%;
             color: $white;
             @include desktop {
                 font-size: 0.8rem;
                 margin-left: 4%;
                 margin-top: 0.5%;
                 height: 68%; 
+            }
+            @include tablet {
+                font-size: 1rem;
+                margin-left: 3%;
+                margin-top: 1.5%;
+                height: 68%;
             }
             @include mobile {
                 font-size: 1rem;
@@ -41,9 +52,13 @@ main {
                 height: 100%;
             }
             .tituloBanner {
-                font-size: 2.1rem;
+                margin-top: .5%;
+                font-size: 1.8rem;
                 @include desktop {
                     font-size: 1.3rem;
+                }
+                @include tablet {
+                    font-size: 1.8rem;
                 }
                 @include mobile {
                     font-size: 2rem;
@@ -51,9 +66,12 @@ main {
             }
         }
         .divPresupuesto{
-            margin-left: 8%;
+            margin-left: 8.6%;
             @include desktop {
                 margin-left: 0.7%;   
+            }
+            @include tablet {
+                margin-left: -1.2%;
             }
             @include mobile {
                 margin-left: -4%;
@@ -65,8 +83,10 @@ main {
                 width: 100%;
                 font-size: 1rem;
                 @include desktop {
-                    font-size: 0.7rem;
-                    margin-left: 1%;    
+                    font-size: 0.7rem;  
+                }
+                @include tablet {
+                    font-size: 1rem;
                 }
                 @include mobile {
                     font-size: 1rem;
@@ -80,8 +100,12 @@ main {
                         background-color: $naranja;
                         color: $white;
                         padding: 6px 70px 6px 70px;
-                        border-radius: 5px;   
+                        border-radius: 50px;   
+                        transition: .5s;
                     }
+                }
+                a:hover{
+                    box-shadow: 5px 3px 5px 5px #3a3a3a;
                 }
             }
         }

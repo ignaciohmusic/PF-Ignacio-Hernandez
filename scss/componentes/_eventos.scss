@@ -1,5 +1,5 @@
 #eventos {
-    background-image: url("../assets/images/IMG_20221223_214927242.jpg");
+    background-image: url("../assets/images/eventos-fotos.webp");
     @include caracteristicas-background-image; 
     
     .eventosOpacity {
@@ -36,8 +36,8 @@
         height: 62%;
         @include d-flex-row-all-center;
         .video{
-            width: 560px;
-            height: 315px;
+            width: 236px;
+            height: 404px;
             @include mobile {
                 height:220px;
                 width: 400px;

@@ -15,10 +15,13 @@ body {
   @media screen and (max-width: 1440px) {
     body {
       grid-template-rows: 14% 86% 12%; } }
+  @media screen and (max-width: 768px) {
+    body {
+      grid-template-rows: 10% 82% 8%; } }
   @media screen and (max-width: 425px) {
     body {
       height: 100vh;
-      grid-template-rows: 10% 82% 8%;
+      grid-template-rows: 10% 80% 10%;
       grid-template-columns: 100%;
       grid-template-areas: "header" "main" "footer"; } }
 
@@ -31,20 +34,33 @@ header {
   @media screen and (max-width: 1440px) {
     header {
       font-size: 0.9rem; } }
+  @media screen and (max-width: 768px) {
+    header {
+      font-size: 2rem; } }
   @media screen and (max-width: 425px) {
     header {
       font-size: 1.5rem; } }
   header nav {
     width: 100%; }
+    header nav li {
+      padding: 10px 10px; }
+    header nav .nav-link:hover {
+      transform: scale(1.1); }
+  header .navbar .logoMobile {
+    width: 35%;
+    height: 1%; }
   header .navbar .navbar-nav {
     align-items: center; }
     header .navbar .navbar-nav .nav-link {
       font-size: 1rem;
-      padding: 0.5rem 1rem; }
+      padding: 0.5rem 1rem;
+      transition: .3s; }
     header .navbar .navbar-nav .navbar-brand {
-      padding: 0 1rem; }
+      padding: 0 1rem;
+      margin: 0px -207px 0px 0px; }
       header .navbar .navbar-nav .navbar-brand .logoNav {
-        margin-left: 12%; }
+        margin-left: 0%;
+        width: 30%; }
 
 main {
   font-size: 1rem;
@@ -63,10 +79,15 @@ main {
     flex-direction: column;
     background: #aaaaaa;
     background: radial-gradient(circle, rgba(170, 170, 170, 0.43181) 13%, rgba(170, 170, 170, 0.4) 82%);
-    height: 22%; }
+    height: 23%; }
     @media screen and (max-width: 1440px) {
       #imagenInicio .bannerOpacity {
         height: 31%;
+        flex-direction: column;
+        flex-wrap: nowrap; } }
+    @media screen and (max-width: 768px) {
+      #imagenInicio .bannerOpacity {
+        height: 24%;
         flex-direction: column;
         flex-wrap: nowrap; } }
     @media screen and (max-width: 425px) {
@@ -77,13 +98,19 @@ main {
       display: flex;
       flex-direction: column;
       font-size: 1rem;
-      margin-left: 10%;
+      margin-left: 10.4%;
       color: #ffffff; }
       @media screen and (max-width: 1440px) {
         #imagenInicio .bannerOpacity .textoBanner {
           font-size: 0.8rem;
           margin-left: 4%;
           margin-top: 0.5%;
+          height: 68%; } }
+      @media screen and (max-width: 768px) {
+        #imagenInicio .bannerOpacity .textoBanner {
+          font-size: 1rem;
+          margin-left: 3%;
+          margin-top: 1.5%;
           height: 68%; } }
       @media screen and (max-width: 425px) {
         #imagenInicio .bannerOpacity .textoBanner {
@@ -92,18 +119,25 @@ main {
           justify-content: center;
           height: 100%; } }
       #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
-        font-size: 2.1rem; }
+        margin-top: .5%;
+        font-size: 1.8rem; }
         @media screen and (max-width: 1440px) {
           #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
             font-size: 1.3rem; } }
+        @media screen and (max-width: 768px) {
+          #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
+            font-size: 1.8rem; } }
         @media screen and (max-width: 425px) {
           #imagenInicio .bannerOpacity .textoBanner .tituloBanner {
             font-size: 2rem; } }
     #imagenInicio .bannerOpacity .divPresupuesto {
-      margin-left: 8%; }
+      margin-left: 8.6%; }
       @media screen and (max-width: 1440px) {
         #imagenInicio .bannerOpacity .divPresupuesto {
           margin-left: 0.7%; } }
+      @media screen and (max-width: 768px) {
+        #imagenInicio .bannerOpacity .divPresupuesto {
+          margin-left: -1.2%; } }
       @media screen and (max-width: 425px) {
         #imagenInicio .bannerOpacity .divPresupuesto {
           margin-left: -4%; } }
@@ -115,8 +149,10 @@ main {
         font-size: 1rem; }
         @media screen and (max-width: 1440px) {
           #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
-            font-size: 0.7rem;
-            margin-left: 1%; } }
+            font-size: 0.7rem; } }
+        @media screen and (max-width: 768px) {
+          #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
+            font-size: 1rem; } }
         @media screen and (max-width: 425px) {
           #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto {
             font-size: 1rem;
@@ -128,7 +164,10 @@ main {
           background-color: #fc9b00;
           color: #ffffff;
           padding: 6px 70px 6px 70px;
-          border-radius: 5px; }
+          border-radius: 50px;
+          transition: .5s; }
+        #imagenInicio .bannerOpacity .divPresupuesto .pedirPresupuesto a:hover {
+          box-shadow: 5px 3px 5px 5px #3a3a3a; }
 
 footer {
   background-color: black;
@@ -168,54 +207,118 @@ footer {
     @media screen and (max-width: 425px) {
       #imagenNosotros .nosotrosOpacity {
         flex-direction: column; } }
+    @media screen and (max-width: 768px) {
+      #imagenNosotros .nosotrosOpacity {
+        flex-direction: column; } }
     #imagenNosotros .nosotrosOpacity .nosotros {
       display: flex;
       flex-wrap: nowrap;
       flex-direction: column;
       align-items: center;
-      width: 50%; }
+      width: 30%;
+      margin-left: 10%;
+      height: 90%; }
       @media screen and (max-width: 425px) {
         #imagenNosotros .nosotrosOpacity .nosotros {
-          width: 100%; } }
+          width: 100%;
+          margin-left: 0%;
+          height: 50%; } }
+      @media screen and (max-width: 768px) {
+        #imagenNosotros .nosotrosOpacity .nosotros {
+          width: 100%;
+          margin-left: 0%;
+          height: 100%; } }
       #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros {
         font-size: 1rem;
         display: flex;
-        width: 50%;
-        height: 100%;
+        width: 40%;
+        height: 116%;
+        margin-left: 30%;
         flex-wrap: nowrap;
         align-items: flex-end; }
+        @media screen and (max-width: 425px) {
+          #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros {
+            height: 60%;
+            margin-left: 2%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center; } }
+        @media screen and (max-width: 768px) {
+          #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros {
+            height: 60%;
+            margin-left: 2%;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: center; } }
         #imagenNosotros .nosotrosOpacity .nosotros .logoNosotros .logoEmpresaNosotros {
           font-size: 1rem;
-          width: 100%; }
+          width: 100%;
+          border-radius: 16px; }
       #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes {
         display: flex;
         margin-top: 10px;
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        margin-left: 30%; }
+        @media screen and (max-width: 425px) {
+          #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes {
+            margin-left: 0%;
+            height: 20%; } }
+        @media screen and (max-width: 768px) {
+          #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes {
+            margin-left: 0%;
+            height: 20%; } }
         #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo {
           width: 62%; }
           #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo .whatsapp {
-            width: 13%;
+            width: 18%;
             margin-top: 2%;
-            margin-left: 85%; }
+            margin-left: 80%; }
           #imagenNosotros .nosotrosOpacity .nosotros .botonesRedes .anchoLogo .instagram {
-            width: 13%;
+            width: 18%;
             margin-top: 2%;
             margin-left: 3%; }
-    #imagenNosotros .nosotrosOpacity .textoNosotros {
+    #imagenNosotros .nosotrosOpacity .sectionNosotros {
       display: flex;
       justify-content: center;
       flex-direction: column;
       color: #ffffff;
-      font-size: 1.8rem;
-      width: 100%;
-      height: 92%; }
+      font-size: 1.4rem;
+      width: 70%;
+      height: 100%;
+      height: 90%; }
       @media screen and (max-width: 1440px) {
-        #imagenNosotros .nosotrosOpacity .textoNosotros {
+        #imagenNosotros .nosotrosOpacity .sectionNosotros {
           font-size: 1.4rem; } }
       @media screen and (max-width: 425px) {
-        #imagenNosotros .nosotrosOpacity .textoNosotros {
-          font-size: 1rem; } }
+        #imagenNosotros .nosotrosOpacity .sectionNosotros {
+          font-size: 1.5rem;
+          width: 100%;
+          height: 85%;
+          align-items: center;
+          flex-direction: column;
+          justify-content: flex-start; } }
+      @media screen and (max-width: 768px) {
+        #imagenNosotros .nosotrosOpacity .sectionNosotros {
+          font-size: 1.5rem;
+          width: 100%;
+          height: 85%;
+          align-items: center;
+          flex-direction: column;
+          justify-content: flex-start; } }
+      #imagenNosotros .nosotrosOpacity .sectionNosotros .textoNosotros {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        margin-left: 1.7%; }
+        @media screen and (max-width: 425px) {
+          #imagenNosotros .nosotrosOpacity .sectionNosotros .textoNosotros {
+            margin-left: 0%;
+            width: 90%; } }
+        @media screen and (max-width: 768px) {
+          #imagenNosotros .nosotrosOpacity .sectionNosotros .textoNosotros {
+            margin-left: 0%;
+            width: 90%; } }
 
 #servicio {
   background-image: url("../assets/images/servicio.webp");
@@ -273,6 +376,9 @@ footer {
       @media screen and (max-width: 1440px) {
         #servicio .servicioOpacity .iconos {
           grid-template-columns: 42% 8% 8% 42%; } }
+      @media screen and (max-width: 768px) {
+        #servicio .servicioOpacity .iconos {
+          grid-template-columns: 25% 25% 25% 25%; } }
       @media screen and (max-width: 425px) {
         #servicio .servicioOpacity .iconos {
           grid-template-columns: 25% 25% 25% 25%; } }
@@ -287,12 +393,19 @@ footer {
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .divSonido {
             width: 100%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .divSonido {
+            width: 100%; } }
         #servicio .servicioOpacity .iconos .divSonido .sonido {
           display: flex;
           background-color: #ffffff;
-          border: 5px solid #363636;
-          border-radius: 5px;
+          border: 6px solid #363636;
+          border-radius: 20px;
           width: 12%; }
+          @media screen and (max-width: 768px) {
+            #servicio .servicioOpacity .iconos .divSonido .sonido {
+              width: 58%;
+              height: 100%; } }
           @media screen and (max-width: 425px) {
             #servicio .servicioOpacity .iconos .divSonido .sonido {
               width: 65%; } }
@@ -304,9 +417,12 @@ footer {
         @media screen and (max-width: 1440px) {
           #servicio .servicioOpacity .iconos .tituloSonido {
             width: 98%; } }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .tituloSonido {
+            margin-left: 58%; } }
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .tituloSonido {
-            margin-left: 43%; } }
+            margin-left: 45%; } }
       #servicio .servicioOpacity .iconos .divIluminacion {
         grid-area: iluminacion;
         display: flex;
@@ -314,8 +430,8 @@ footer {
         #servicio .servicioOpacity .iconos .divIluminacion .iluminacion {
           display: flex;
           background-color: #ffffff;
-          border: 5px solid #363636;
-          border-radius: 5px;
+          border: 6px solid #363636;
+          border-radius: 20px;
           width: 85%; }
           @media screen and (max-width: 425px) {
             #servicio .servicioOpacity .iconos .divIluminacion .iluminacion {
@@ -324,14 +440,23 @@ footer {
           #servicio .servicioOpacity .iconos .divIluminacion {
             width: 75%;
             margin-left: 12%; } }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .divIluminacion {
+            width: 68%;
+            margin-left: 23%;
+            height: 100%; } }
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .divIluminacion {
-            width: 76%; } }
+            width: 76%;
+            margin-left: 19%; } }
       #servicio .servicioOpacity .iconos .tituloIluminacion {
         grid-area: titulo2;
         display: flex;
         font-size: 1rem;
         justify-content: center; }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .tituloIluminacion {
+            margin-left: 16%; } }
       #servicio .servicioOpacity .iconos .divEstructuras {
         grid-area: estructuras;
         display: flex;
@@ -340,18 +465,32 @@ footer {
         #servicio .servicioOpacity .iconos .divEstructuras .estructuras {
           display: flex;
           background-color: #ffffff;
-          border: 5px solid #363636;
-          border-radius: 5px;
+          border: 6px solid #363636;
+          border-radius: 20px;
           width: 76%; }
         @media screen and (max-width: 1440px) {
           #servicio .servicioOpacity .iconos .divEstructuras {
             width: 75%;
             margin-left: 10%; } }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .divEstructuras {
+            width: 75%;
+            margin-left: 9%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .divEstructuras {
+            width: 86%; } }
       #servicio .servicioOpacity .iconos .tituloEstructuras {
         grid-area: titulo3;
         display: flex;
         font-size: 1rem;
         justify-content: center; }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .tituloEstructuras {
+            margin-right: 6%; } }
+        @media screen and (max-width: 425px) {
+          #servicio .servicioOpacity .iconos .tituloEstructuras {
+            margin-right: 0%;
+            margin-left: 6%; } }
       #servicio .servicioOpacity .iconos .divEnergia {
         grid-area: energia;
         display: flex;
@@ -360,9 +499,12 @@ footer {
         #servicio .servicioOpacity .iconos .divEnergia .energia {
           display: flex;
           background-color: #ffffff;
-          border: 5px solid #363636;
-          border-radius: 5px;
+          border: 6px solid #363636;
+          border-radius: 20px;
           width: 12%; }
+          @media screen and (max-width: 768px) {
+            #servicio .servicioOpacity .iconos .divEnergia .energia {
+              width: 58%; } }
           @media screen and (max-width: 425px) {
             #servicio .servicioOpacity .iconos .divEnergia .energia {
               width: 65%; } }
@@ -371,9 +513,12 @@ footer {
         display: flex;
         margin-left: 2.5%;
         font-size: 1rem; }
+        @media screen and (max-width: 768px) {
+          #servicio .servicioOpacity .iconos .tituloEnergia {
+            margin-left: 14.5%; } }
         @media screen and (max-width: 425px) {
           #servicio .servicioOpacity .iconos .tituloEnergia {
-            margin-left: 6.5%; } }
+            margin-left: 9%; } }
 
 #fotos {
   background-image: url("../assets/images/fotos.webp");
@@ -399,6 +544,10 @@ footer {
     height: 100%;
     padding: auto;
     border-radius: 30px; }
+    @media screen and (max-width: 768px) {
+      #fotos .eventos {
+        width: 87%;
+        border-radius: 8px; } }
     @media screen and (max-width: 425px) {
       #fotos .eventos {
         border-radius: 10px; } }
@@ -407,13 +556,17 @@ footer {
     margin-top: 6%;
     position: relative;
     left: -15%; }
+    @media screen and (max-width: 768px) {
+      #fotos #boton1 {
+        margin-top: 6%;
+        position: inherit; } }
     @media screen and (max-width: 425px) {
       #fotos #boton1 {
-        margin-top: 5%;
-        left: 0%; } }
+        margin-top: 2%;
+        position: inherit; } }
   #fotos #modalCentrar {
     position: relative;
-    top: 200px; }
+    top: 150px; }
   @media screen and (max-width: 425px) {
     #fotos .col-3 {
       width: 56%; } }
@@ -422,13 +575,17 @@ footer {
     margin-top: -26.8%;
     position: relative;
     right: -15%; }
+    @media screen and (max-width: 768px) {
+      #fotos #boton2 {
+        margin-top: 5%;
+        position: inherit; } }
     @media screen and (max-width: 425px) {
       #fotos #boton2 {
-        margin-top: 6%;
-        right: 0%; } }
+        margin-top: 5%;
+        position: inherit; } }
 
 #eventos {
-  background-image: url("../assets/images/IMG_20221223_214927242.jpg");
+  background-image: url("../assets/images/eventos-fotos.webp");
   font-size: 1rem;
   background-repeat: no-repeat;
   background-position: center;
@@ -474,8 +631,8 @@ footer {
     justify-content: center;
     align-items: center; }
     #eventos .videoEventos .video {
-      width: 560px;
-      height: 315px; }
+      width: 236px;
+      height: 404px; }
       @media screen and (max-width: 425px) {
         #eventos .videoEventos .video {
           height: 220px;
@@ -516,6 +673,12 @@ footer {
           margin-left: 33%;
           height: 87%;
           font-size: .8rem; } }
+      @media screen and (max-width: 768px) {
+        #imagenContacto .datosOpacity .divFormDatos {
+          flex-direction: column;
+          margin-left: 25%;
+          align-items: center;
+          height: 100%; } }
       @media screen and (max-width: 425px) {
         #imagenContacto .datosOpacity .divFormDatos {
           flex-direction: column;
@@ -532,6 +695,11 @@ footer {
           #imagenContacto .datosOpacity .divFormDatos .datos {
             margin-bottom: 19%;
             font-size: 0.8rem; } }
+        @media screen and (max-width: 768px) {
+          #imagenContacto .datosOpacity .divFormDatos .datos {
+            align-items: center;
+            margin-bottom: 0%;
+            font-size: 1.1rem; } }
         @media screen and (max-width: 425px) {
           #imagenContacto .datosOpacity .divFormDatos .datos {
             align-items: center;
@@ -546,6 +714,10 @@ footer {
         @media screen and (max-width: 1440px) {
           #imagenContacto .datosOpacity .divFormDatos .formulario {
             font-size: 0.5rem; } }
+        @media screen and (max-width: 768px) {
+          #imagenContacto .datosOpacity .divFormDatos .formulario {
+            font-size: 0rem;
+            align-items: center; } }
         @media screen and (max-width: 425px) {
           #imagenContacto .datosOpacity .divFormDatos .formulario {
             font-size: 0rem;
@@ -565,7 +737,7 @@ footer {
         #imagenContacto .datosOpacity .divFormDatos .formulario div input {
           display: grid;
           padding: 8px 8px 8px 8px;
-          border-radius: 5px;
+          border-radius: 8px;
           width: 300px; }
         #imagenContacto .datosOpacity .divFormDatos .formulario div {
           display: flex;
@@ -579,7 +751,8 @@ footer {
             #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje textarea {
               display: grid;
               justify-content: center;
-              width: 300px; }
+              width: 300px;
+              border-radius: 5px; }
               @media screen and (max-width: 1440px) {
                 #imagenContacto .datosOpacity .divFormDatos .formulario div .mensaje textarea {
                   height: 77px; } }
@@ -587,6 +760,7 @@ footer {
             display: flex;
             justify-items: center;
             padding: 10px 10px 10px 10px;
+            border-radius: 30px;
             flex-direction: column;
             align-items: center; }
             #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
@@ -594,3 +768,6 @@ footer {
               @media screen and (max-width: 1440px) {
                 #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
                   font-size: 0.7rem; } }
+              @media screen and (max-width: 768px) {
+                #imagenContacto .datosOpacity .divFormDatos .formulario div .enviar .wEnviar {
+                  font-size: 1rem; } }

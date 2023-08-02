@@ -55,6 +55,9 @@
             @include desktop {
                 grid-template-columns: 42% 8% 8% 42%;   
             }
+            @include tablet {
+                grid-template-columns: 25% 25% 25% 25%;
+            }
             @include mobile {
                 grid-template-columns: 25% 25% 25% 25%;
             }
@@ -69,9 +72,16 @@
                 @include mobile {
                     width: 100%;
                 }
+                @include mobile {
+                    width: 100%;
+                }
                 .sonido{
                     @include detalles-iconos; 
                     width: 12%;
+                    @include tablet {
+                        width: 58%;
+                        height: 100%;
+                    }
                     @include mobile {
                         width: 65%;
                     }
@@ -85,8 +95,11 @@
                 @include desktop {
                     width: 98%;
                 }
+                @include tablet {
+                    margin-left: 58%;
+                }
                 @include mobile {
-                    margin-left: 43%;
+                    margin-left: 45%;
                 }
             }
             .divIluminacion{
@@ -104,8 +117,14 @@
                     width: 75%;
                     margin-left: 12%;
                 }
+                @include tablet {
+                    width: 68%;
+                    margin-left: 23%;
+                    height: 100%;
+                }
                 @include mobile {
                     width: 76%;
+                    margin-left: 19%;
                 }
             }
             .tituloIluminacion{
@@ -113,6 +132,9 @@
                 display: flex;
                 font-size: 1rem;
                 justify-content: center;
+                @include tablet {
+                    margin-left: 16%;
+                }
             }
             .divEstructuras{
                 grid-area: estructuras;
@@ -127,12 +149,26 @@
                     width: 75%;
                     margin-left: 10%;
                 }
+                @include tablet {
+                    width: 75%;
+                    margin-left: 9%;
+                }
+                @include mobile {
+                    width: 86%;
+                }
             }
             .tituloEstructuras{
                 grid-area: titulo3;
                 display: flex;
                 font-size: 1rem;
                 justify-content: center;
+                @include tablet {
+                    margin-right: 6%;
+                }
+                @include mobile {
+                    margin-right: 0%;
+                    margin-left: 6%;
+                }
             }
             .divEnergia{
                 grid-area: energia;
@@ -142,10 +178,14 @@
                 .energia{
                     @include detalles-iconos; 
                     width: 12%;
+                    @include tablet {
+                        width: 58%;
+                    }
                     @include mobile {
                         width: 65%;
                     }
                 }
+
 
             }
             .tituloEnergia{
@@ -153,8 +193,11 @@
                 display: flex;
                 margin-left: 2.5%;
                 font-size: 1rem;
+                @include tablet {
+                    margin-left: 14.5%;
+                }
                 @include mobile {
-                    margin-left: 6.5%;
+                    margin-left: 9%;
                 }
             }
 

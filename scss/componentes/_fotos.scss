@@ -17,6 +17,10 @@
         height: 100%;
         padding: auto;
         border-radius: 30px;
+        @include tablet {
+            width: 87%;
+            border-radius: 8px;
+        }
         @include mobile {
             border-radius: 10px;
         }
@@ -26,14 +30,18 @@
         margin-top: 6% ;
         position: relative;
         left: -15%;
+        @include tablet  {
+            margin-top: 6%;
+            position: inherit;
+        }
         @include mobile {
-            margin-top: 5%;
-            left: 0%;
+            margin-top: 2%;
+            position: inherit;
         }
    }
    #modalCentrar{
        position: relative;
-       top: 200px;
+       top: 150px;
    }
    @include mobile {
     .col-3 {
@@ -46,9 +54,13 @@
     margin-top: -26.8%;
     position: relative;
     right: -15%;
+    @include tablet {
+        margin-top: 5%;
+        position: inherit;
+    }
     @include mobile {
-        margin-top: 6%;
-        right: 0%;
+        margin-top: 5%;
+        position: inherit;
     }
    }
 }
